@@ -1,0 +1,9 @@
+**/.cache
+**/.vscode
+**/.yarn
+**/.pnp.*
+**/.env.*
+**/public
+**/node_modules
+**/package-lock.json
+**/yarn.lock
