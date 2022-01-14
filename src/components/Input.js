@@ -1,10 +1,11 @@
 import tw, { styled, css, theme } from 'twin.macro'
 
-const Button = styled.button(({ variant, isSmall }) => [
+const Input = styled.input(({ variant, isSmall }) => [
 
   tw`px-8 py-2 rounded focus:outline-none transform duration-75`,
 
   tw`hocus:(scale-105 text-yellow-400)`,
+
 
   variant === 'primary' && tw`bg-black text-white border-black`,
 
@@ -24,4 +25,4 @@ const Button = styled.button(({ variant, isSmall }) => [
   `,
 ])
 
-export default Button
+export default Input
