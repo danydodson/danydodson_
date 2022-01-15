@@ -4,7 +4,7 @@ import 'twin.macro'
 const IconLogo = () => (
   <a
     tw='w-32 mb-10 p-5 block opacity-50 hover:opacity-100'
-    href='https://github.com/ben-rogerson/twin.macro'
+    href='http://localhost:8000'
     target='_blank'
     rel='noopener noreferrer'
   >
