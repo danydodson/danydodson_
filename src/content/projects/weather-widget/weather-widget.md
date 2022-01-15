@@ -3,6 +3,7 @@ template: project
 date: 2016-11-16T00:00:00.000Z
 lastmod: 2016-11-16T00:00:00.000Z
 title: Weather Widget
+slug: /projects/weather-widget
 draft: false
 cover: cover.png
 description: "Simple weather app made with Node.js, Express, and Heroku. Utilized the OpenWeatherMap API and Google Maps API."
@@ -15,7 +16,8 @@ tech:
   - Express
   - EJS
 featured: false
-slug: /weather-widget/
 ---
+
+# Weather Widget
 
 Simple weather app made with Node.js, Express, and Heroku. Utilized the OpenWeatherMap API and Google Maps API.

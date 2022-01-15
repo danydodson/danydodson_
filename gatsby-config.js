@@ -10,7 +10,15 @@ module.exports = {
   plugins: [
     `gatsby-plugin-emotion`,
     `gatsby-plugin-graphql-config`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-remark-images`,
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'static',
+        path: `${__dirname}/static`
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -40,13 +48,6 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'static',
-        path: `${__dirname}/static`
-      }
-    },
-    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.md`, `.mdx`],
@@ -63,15 +64,25 @@ module.exports = {
           },
           {
             resolve: `gatsby-remark-smartypants`
-          },
-          {
-            resolve: `gatsby-plugin-feed`
           }
         ]
       }
     },
     {
       resolve: `gatsby-plugin-sharp`
-    }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Dany Dodson`,
+        start_url: `/`,
+        display: `minimal-ui`,
+        short_name: `danydodson`,
+        theme_color: `#1b1f23`,
+        background_color: `#fafffd`,
+        icon: `static/logos/logo@4x.png`
+      }
+    },
+    `gatsby-plugin-offline`,
   ]
 }

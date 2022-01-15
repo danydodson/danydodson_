@@ -1,5 +1,6 @@
 import React from 'react'
 import tw from 'twin.macro'
+
 import { Button, Logo, Layout } from './../components'
 
 const IndexPage = () => (

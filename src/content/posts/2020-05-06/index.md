@@ -8,7 +8,8 @@ draft: false
 cover: cover.png
 description: List of the questions from dev to the company.
 category: Programming
-tags: [interview]
+tags: 
+  - interview
 featured: false
 ---
 

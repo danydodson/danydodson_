@@ -30,6 +30,8 @@ const PostTemplate = ({ data, pageContext }) => {
           ))}
         </ul>
 
+        <br/>
+        
         <h2>All Categories</h2>
 
         <ul>

@@ -8,7 +8,9 @@ draft: false
 cover: cover.png
 description: Account Surfer became "3rd in Best Business or Consumer Value" at Microsoft 365 app award
 category: Productivity
-tags: [windows, chrome]
+tags: 
+  - windows
+  - chrome
 featured: false
 ---
 

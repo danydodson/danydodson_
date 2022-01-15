@@ -8,7 +8,9 @@ draft: false
 cover: cover.png
 description: All the largest online social networks (Facebook/Youtube/Instagram/Twitter) should ban Anti-Vaccination posts and users.
 category: Healthcare
-tags: [health, petition]
+tags: 
+  - health
+  - petition
 featured: false
 ---
 

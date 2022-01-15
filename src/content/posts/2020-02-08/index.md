@@ -8,7 +8,8 @@ draft: false
 cover: cover.png
 description: If you faced with scrolling issues in Chrome - disable this flag ```chrome://flags/#disable-threaded-scrolling```
 category: Productivity
-tags: [chrome]
+tags: 
+  - chrome
 featured: false
 ---
 

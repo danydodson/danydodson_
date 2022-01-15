@@ -47,6 +47,7 @@ export const PostBySlugQuery = graphql`
   query ($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       body
+      
       fields {
         slug
         categorySlug

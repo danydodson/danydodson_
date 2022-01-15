@@ -8,7 +8,9 @@ draft: false
 cover: cover.png
 description: It might be annoying scroll Twitter videos and click on each to hear sound. Here is the quick hack.
 category: Productivity
-tags: [javascript, twitter]
+tags: 
+  - javascript
+  - twitter
 featured: false
 ---
 

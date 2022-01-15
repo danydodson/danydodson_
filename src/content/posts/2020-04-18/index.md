@@ -8,7 +8,10 @@ draft: false
 cover: cover.png
 description: Chrome custom JS and CSS extension
 category: Productivity
-tags: [chrome, javascript, utilities]
+tags: 
+  - chrome
+  - javascript
+  - utilities
 featured: false
 ---
 

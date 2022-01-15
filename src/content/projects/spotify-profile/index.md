@@ -3,6 +3,7 @@ template: project
 date: 2018-12-18
 lastmod: 2018-12-18
 title: Spotify Profile
+slug: /projects/spotify-profile
 draft: false
 cover: cover.png
 description:

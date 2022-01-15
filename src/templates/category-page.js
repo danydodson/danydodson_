@@ -32,6 +32,8 @@ const CategoryTemplate = ({ data, pageContext, location }) => {
           ))}
         </ul>
 
+        <br/>
+
         <h2>all categories:</h2>
 
         <ul>

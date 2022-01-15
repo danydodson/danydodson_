@@ -3,12 +3,13 @@ template: job
 title: Engineer
 date: 2021-09-28T00:00:00.000Z
 draft: false
-slug: engineer
+slug: /jobs/engineer-at-upstate
 cover: cover.jpg
-company: Upstatement
+company: Upstate
 location: Boston, MA
 range: May 2018 - Present
 url: https://www.upstatement.com/
+description: Write modern, performant, maintainable code for a diverse array of client and internal projects
 ---
 
 # Engineer

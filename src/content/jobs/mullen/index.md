@@ -3,13 +3,13 @@ template: job
 title: Creative Technologist Co-op
 date: 2019-08-05T00:00:00.000Z
 draft: false
-slug: /job-creative-technologist-op
+slug: /jobs/creative-technologist-at-mullen
 cover: cover.jpg
 company: MullenLowe
 location: Boston, MA
 range: July - December 2015
 url: https://us.mullenlowe.com/
-preview: /content/projects/octo-profile/cover.png
+description: Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery
 ---
 
 # Creative Technologist Co-op

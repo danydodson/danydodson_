@@ -1,4 +1,4 @@
-export { default as Button } from './Button'
-export { default as Input } from './Input'
-export { default as Logo } from './Logo'
-export { default as Layout } from './Layout'
+export { default as Button } from './button'
+export { default as Input } from './input'
+export { default as Logo } from './logo'
+export { default as Layout } from './layout'

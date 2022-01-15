@@ -8,7 +8,10 @@ draft: false
 cover: cover.png
 description: Quickly switch between accounts and browsers on Windows with Account Surfer.
 category: Productivity
-tags: [chrome, windows, twitter]
+tags: 
+  - chrome
+  - windows
+  - twitter
 featured: false
 ---
 

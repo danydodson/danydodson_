@@ -8,7 +8,9 @@ draft: false
 cover: cover.png
 description: Often a part of a video is obstructed by the suggested video overlay. Here’s how you can hide the overlay.
 category: Productivity
-tags: [javascript, youtube]
+tags: 
+  - javascript 
+  - youtube
 featured: false
 ---
 
