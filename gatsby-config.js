@@ -13,9 +13,9 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-remark-images`,
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'static',
+        name: `static`,
         path: `${__dirname}/static`
       }
     },
@@ -38,13 +38,6 @@ module.exports = {
       options: {
         name: `projects`,
         path: `${__dirname}/src/content/projects`
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'assets',
-        path: `${__dirname}/src/assets`
       }
     },
     {
@@ -76,11 +69,11 @@ module.exports = {
       options: {
         name: `Dany Dodson`,
         start_url: `/`,
-        display: `minimal-ui`,
         short_name: `danydodson`,
         theme_color: `#1b1f23`,
         background_color: `#fafffd`,
-        icon: `static/logos/logo@4x.png`
+        icon: `static/logos/logo@4x.png`,
+        display: `minimal-ui`,
       }
     },
     `gatsby-plugin-offline`,

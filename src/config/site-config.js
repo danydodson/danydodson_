@@ -1,16 +1,16 @@
 const config = {
 
   url: `https://danys.art`,
+  image: `/logos/logo@4.png`,
   title: `🖐️ Web & Software Engineer. Currently working remotely from the mid west.`,
   description: `💻 danydodson.dev | 🎨 danys.art | ♡ Dany Dodson`,
-  image: `/logos/logo@4.png`,
   copyright: `© 2021 | Dany Dodson ♡`,
 
   author: {
     name: `Dany Dodson`,
     username: `danydodson`,
     email: `danydodson@gmail.com`,
-    image: `/logos/logo@4.png`,
+    image: `/cards/og@1x.png`,
     bio: `Award-winning writer. Subtly charming travel advocate. Web practitioner.`,
     location: `Evansville, IN`,
   },
