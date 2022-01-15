@@ -1,5 +1,5 @@
 export { default as Button } from './button'
+export { default as Form } from './form'
 export { default as Head } from './head'
-export { default as Input } from './input'
-export { default as Logo } from './logo'
 export { default as Layout } from './layout'
+export { default as Logo } from './logo'

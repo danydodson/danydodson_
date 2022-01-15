@@ -10,6 +10,13 @@
 <!-- <a href="https://twitter.com/bamania_unnati" target="_blank"><img height="25" src = "https://img.shields.io/badge/-Twitter-00acee?style=for-the-badge&logo=Twitter&logoColor=white"></a> -->
 <!-- <a href="https://dev.to/commentme" target="_blank"><img height="27" src = "https://img.shields.io/badge/DEV.TO-%230A0A0A.svg?&style=for-the-badge&logo=dev.to&logoColor=white"></a> -->
 
+<!-- 
+Standard Breakpoint Sizes
+1920×1080
+1366×768 
+360×640
+-->
+
 ## My tech stack
 
 ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
