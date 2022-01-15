@@ -75,7 +75,6 @@ module.exports = {
         icon: `static/logos/logo@4x.png`,
         display: `minimal-ui`,
       }
-    },
-    `gatsby-plugin-offline`,
+    }
   ]
 }

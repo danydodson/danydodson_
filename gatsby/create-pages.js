@@ -66,16 +66,41 @@ const createPages = async ({ graphql, actions, reporter }) => {
   const { edges } = result.data.allMdx
 
   edges.map(edge => {
+
     if (edge
       && edge.node
       && edge.node.frontmatter
       && edge.node.frontmatter.template
-      // && edge.node.frontmatter.template === 'post'
+      && edge.node.frontmatter.template === 'post'
     ) {
       // site.com/post/<post>
       createPage({
         path: edge.node.fields.slug,
         component: path.resolve('./src/templates/post.js'),
+        context: { slug: `${edge.node.fields.slug}`, categories }
+      })
+    } else if (edge
+      && edge.node
+      && edge.node.frontmatter
+      && edge.node.frontmatter.template
+      && edge.node.frontmatter.template === 'project'
+    ) {
+      // site.com/project/<project>
+      createPage({
+        path: edge.node.fields.slug,
+        component: path.resolve('./src/templates/project.js'),
+        context: { slug: `${edge.node.fields.slug}`, categories }
+      })
+    } else if (edge
+      && edge.node
+      && edge.node.frontmatter
+      && edge.node.frontmatter.template
+      && edge.node.frontmatter.template === 'job'
+    ) {
+      // site.com/job/<job>
+      createPage({
+        path: edge.node.fields.slug,
+        component: path.resolve('./src/templates/job.js'),
         context: { slug: `${edge.node.fields.slug}`, categories }
       })
     }

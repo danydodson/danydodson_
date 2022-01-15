@@ -9,8 +9,6 @@ cover: cover.png
 description:
 github: https://github.com/danydodson
 external: https://spotify-profile.herokuapp.com/
-ios: null
-android: null
 tech: [React, Express, Styled Components]
 featured: true
 ---

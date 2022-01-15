@@ -51,7 +51,7 @@ export const PostBySlug = graphql`
   query ($postsLimit: Int!) {
     allMdx(
       limit: $postsLimit
-      filter: { frontmatter: { draft: { ne: true } } }
+      filter: { frontmatter: { draft: { ne: true }, template: {eq: "post" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
@@ -62,6 +62,7 @@ export const PostBySlug = graphql`
             tagSlugs
           }
           frontmatter {
+            template
             title
             slug
             date(formatString: "MMM D YYYY")
