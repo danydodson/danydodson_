@@ -11,6 +11,9 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-graphql-config`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-remark-images`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -60,9 +63,6 @@ module.exports = {
           }
         ]
       }
-    },
-    {
-      resolve: `gatsby-plugin-sharp`
     },
     {
       resolve: `gatsby-plugin-manifest`,

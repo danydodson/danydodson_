@@ -14,7 +14,7 @@ const Button = styled.button(({ variant, isSmall }) => [
       `,
     tw`border-2 border-r-yellow-600`,
   ],
-
+  
   variant === 'tertiary' && tw`bg-black text-white border-black`,
 
   isSmall ? tw`text-sm` : tw`text-lg`,

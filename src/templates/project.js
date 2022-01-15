@@ -1,13 +1,17 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { css } from 'twin.macro'
 import { Layout } from '../components'
 
 // site.com/projects/<project>
 
 const ProjectsTemplate = ({ data }) => {
   const { body, frontmatter } = data.mdx
-  const { title, date, description, github, external, tech } = frontmatter
+  const { title, date, description, cover, github, external, tech } = frontmatter
+
+  const image = getImage(cover)
 
   return (
     <Layout>
@@ -18,6 +22,14 @@ const ProjectsTemplate = ({ data }) => {
           <br />
           {/* <GatsbyImage image={image} alt={category} /> */}
           <h2>{date}</h2>
+          <br />
+          <GatsbyImage
+            image={image}
+            alt={title}
+            css={css`
+              border: 4px black dashed;
+            `}
+          />
           <br />
           <h2>{description}</h2>
           <br />
@@ -56,6 +68,14 @@ export const ProjectBySlugQuery = graphql`
         slug
         date(formatString: "MMM D YYYY")
         description
+        cover {
+          childImageSharp {
+            gatsbyImageData(
+              width: 400
+              placeholder: BLURRED
+            )
+          }
+        }
         github
         external
         tech

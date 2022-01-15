@@ -1,13 +1,17 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { css } from 'twin.macro'
 import { Layout } from '../components'
 
 // site.com/posts
 
 const PostsTemplate = ({ data }) => {
   const { body, frontmatter } = data.mdx
-  const { title, date, description, category, tags } = frontmatter
+  const { title, date, description, cover, category, tags } = frontmatter
+
+  const image = getImage(cover)
 
   return (
     <Layout>
@@ -15,10 +19,19 @@ const PostsTemplate = ({ data }) => {
 
         <article>
           <h2>{title}</h2>
+          <br />
 
           <time>{date}</time>
+          <br />
 
-          {/* <GatsbyImage image={image} alt={category} /> */}
+          <GatsbyImage
+            image={image}
+            alt={category}
+            css={css`
+              border: 4px black dashed;
+            `}
+          />
+          <br />
 
           <p>{description}</p>
 
@@ -32,9 +45,7 @@ const PostsTemplate = ({ data }) => {
             <Link to={`/category/${category}`}>{category}</Link>
           </h6>
 
-
           <MDXRenderer>{body}</MDXRenderer>
-
 
         </article>
 
@@ -47,7 +58,6 @@ export const PostBySlugQuery = graphql`
   query ($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       body
-      
       fields {
         slug
         categorySlug
@@ -58,6 +68,14 @@ export const PostBySlugQuery = graphql`
         slug
         date(formatString: "MMM D YYYY")
         description
+        cover {
+          childImageSharp {
+            gatsbyImageData(
+              width: 400
+              placeholder: BLURRED
+            )
+          }
+        }
         category
         tags
       }

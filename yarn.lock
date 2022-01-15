@@ -5528,7 +5528,7 @@ gatsby-plugin-graphql-config@^1.4.0:
     "@babel/runtime" "^7.15.4"
     fs-extra "^10.0.0"
 
-gatsby-plugin-image@^2.4.0:
+gatsby-plugin-image@^2.5.1:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.5.1.tgz#6828d0b827f9efc6202a4b53f6802dfe704ffcce"
   integrity sha512-ueJ4hWO5j0ERiaqGl4WExivwLCI5Zydo3dYsGB+mgU8cALoOv+dqoj6lIVX/fJKiolJMg/P/7DSwAbeAq74TYw==
@@ -5639,7 +5639,7 @@ gatsby-plugin-react-helmet@^5.5.0:
   dependencies:
     "@babel/runtime" "^7.15.4"
 
-gatsby-plugin-sharp@^4.4.0:
+gatsby-plugin-sharp@^4.5.1:
   version "4.5.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-4.5.1.tgz#a6341e8be7be1da8c8510c92c3fdf68e97086734"
   integrity sha512-q2XWcnZX71FVd3hAw8Qb+x6hT1W/OOUhr4Shx5YrcwTJ5X9wnBsdK9o1CevXqDnjrEDipA8nXg1gq9Xa7zJdzw==
@@ -5732,7 +5732,7 @@ gatsby-remark-smartypants@^5.4.0:
     retext-smartypants "^4.0.0"
     unist-util-visit "^2.0.3"
 
-gatsby-source-filesystem@^4.4.0:
+gatsby-source-filesystem@^4.5.1:
   version "4.5.1"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-4.5.1.tgz#4cd34113b83027bd0e97637d14b2dfa77ca6f948"
   integrity sha512-yME2P0uzsKIB8K7j2zidwIJkqko0e8CxB644piti4NqTF0NAjYHRuich0cjGIvv5sGq2infWVvw+6+tRZT2Hqw==
@@ -5769,6 +5769,20 @@ gatsby-telemetry@^3.5.1:
     is-docker "^2.2.1"
     lodash "^4.17.21"
     node-fetch "^2.6.6"
+
+gatsby-transformer-sharp@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-4.5.0.tgz#d5708dc95321d938add7c72d8b50cdc786c4bf05"
+  integrity sha512-q4bbDsb9TrzCMoV+O9qVfC+vew0N8x5jSGkfpxh8oHbu3d2JAToD5BisGh3hCVojoUCkVMszjDnJZ5TXiyJumQ==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    bluebird "^3.7.2"
+    common-tags "^1.8.2"
+    fs-extra "^10.0.0"
+    potrace "^2.1.8"
+    probe-image-size "^6.0.0"
+    semver "^7.3.5"
+    sharp "^0.29.3"
 
 gatsby-worker@^1.5.0:
   version "1.5.0"

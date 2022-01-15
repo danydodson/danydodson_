@@ -1,13 +1,17 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { css } from 'twin.macro'
 import { Layout } from '../components'
 
 // site.com/jobs/<job>
 
 const JobsTemplate = ({ data }) => {
   const { body, frontmatter } = data.mdx
-  const { title, company, description, location, range, url } = frontmatter
+  const { title, company, description, cover, location, range, url } = frontmatter
+
+  const image = getImage(cover)
 
   return (
     <Layout>
@@ -15,6 +19,16 @@ const JobsTemplate = ({ data }) => {
         <article>
 
           <h2>{title}</h2>
+          <br />
+
+          <GatsbyImage
+            image={image}
+            alt={company}
+            css={css`
+              border: 4px black dashed;
+            `}
+          />
+
           <br />
           <h2>{company}</h2>
           <br />
@@ -52,6 +66,14 @@ export const JobBySlugQuery = graphql`
         date(formatString: "MMM D YYYY")
         company
         description
+        cover {
+          childImageSharp {
+            gatsbyImageData(
+              width: 400
+              placeholder: BLURRED
+            )
+          }
+        }
         location
         range
         url
