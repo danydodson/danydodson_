@@ -1,7 +1,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
     extend: {
       colors: {
@@ -21,8 +21,6 @@ module.exports = {
       '2xl': '1536px',
     },
     colors: {
-      // electric: '#db00ff',
-      ribbon: '#0047ff',
       transparent: 'transparent',
       current: 'currentColor',
 
