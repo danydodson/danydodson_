@@ -3,7 +3,7 @@ import 'twin.macro'
 
 const IconStar = () => (
   <a
-    tw='w-32 mb-10 p-5 block opacity-50 hover:opacity-100'
+    tw='w-32 mb-10 p-5 block opacity-60 hover:opacity-100'
     href='http://localhost:8000'
     target='_blank'
     rel='noopener noreferrer'
