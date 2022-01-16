@@ -14,23 +14,26 @@ const Form = () => {
   const { values, handleChange, handleSubmit } = useForm(sendMessage)
 
   return (
-    <form tw='flex flex-col mb-4' onSubmit={handleSubmit}>
+    <section>
 
-      <div tw='flex flex-col mb-6'>
-        <label tw='mb-2 text-lg text-gray-600' htmlFor='email'>Email Address</label>
-        <input css={styles.container()} type='email' name='email' id='email' autoComplete='email' onChange={handleChange} required />
-      </div>
+      <form tw='flex flex-col mb-4' onSubmit={handleSubmit}>
 
-      <div tw='flex flex-col mb-6'>
-        <label tw='mb-2 text-lg text-gray-600' htmlFor='message'>Message</label>
-        <textarea css={styles.container()} type='text' name='message' id='message' autoComplete='off' onChange={handleChange} required />
-      </div>
+        <div tw='flex flex-col mb-6'>
+          <label tw='mb-2 text-lg text-gray-600' htmlFor='email'>Email Address</label>
+          <input css={styles.container()} type='email' name='email' id='email' autoComplete='email' onChange={handleChange} required />
+        </div>
 
-      <Button type='submit' variant='primary'>
-        Send
-      </Button>
+        <div tw='flex flex-col mb-6'>
+          <label tw='mb-2 text-lg text-gray-600' htmlFor='message'>Message</label>
+          <textarea css={styles.container()} type='text' name='message' id='message' autoComplete='off' onChange={handleChange} required />
+        </div>
 
-    </form>
+        <Button type='submit' variant='primary'>
+          Send
+        </Button>
+
+      </form>
+    </section>
   )
 }
 

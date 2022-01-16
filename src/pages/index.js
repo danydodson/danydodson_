@@ -3,17 +3,19 @@ import tw from 'twin.macro'
 
 import {
   Layout,
-  Projects,
-  Posts,
-  Form
+  Hero,
+  // Projects,
+  // Posts,
+  // Form
 } from './../components'
 
 const IndexPage = () => (
   <Layout>
     <main css={styles.container({ hasBackground: false })}>
-      <Posts />
-      <Projects />
-      <Form />
+      <Hero />
+      {/* <Posts /> */}
+      {/* <Projects /> */}
+      {/* <Form /> */}
     </main>
   </Layout>
 )

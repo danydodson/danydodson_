@@ -1,6 +1,9 @@
 module.exports = {
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ['Hans Kendrick', 'sans-serif']
+      },
       colors: {
         electric: '#f19dff',
         ribbon: '#acc3ff',
@@ -11,7 +14,6 @@ module.exports = {
     }
   },
   plugins: [
-    require('@tailwindcss/typography'),
-    // require('@tailwindcss/forms'),
+    require('@tailwindcss/typography')
   ]
 }
