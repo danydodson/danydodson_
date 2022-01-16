@@ -9,12 +9,7 @@ module.exports = {
 
   plugins: [
     `gatsby-plugin-emotion`,
-    `gatsby-plugin-graphql-config`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-    `gatsby-remark-images`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -43,6 +38,11 @@ module.exports = {
         path: `${__dirname}/src/content/projects`
       }
     },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-remark-images`,
+    `gatsby-plugin-graphql-config`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

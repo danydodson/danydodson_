@@ -58,9 +58,11 @@
   "keywords": [
     "gatsby",
     "tailwind",
-    "tailwind",
-    "twin.macro",
+    "twin",
+    "mdx",
     "react",
+    "docker",
+    "docker-compose",
     "portfolio",
     "blog"
   ]
