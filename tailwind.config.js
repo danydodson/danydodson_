@@ -2,8 +2,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        electric: '#db00ff',
-        ribbon: '#0047ff',
+        electric: '#f19dff',
+        ribbon: '#acc3ff',
       },
       borderRadius: {
         xs: '1px',
