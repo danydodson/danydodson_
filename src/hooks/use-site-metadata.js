@@ -8,6 +8,7 @@ export default function useSiteMetadata() {
         site {
           siteMetadata {
             url
+            image
             title
             description
             copyright

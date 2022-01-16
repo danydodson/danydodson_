@@ -1,8 +1,8 @@
 const config = {
 
-  url: `https://danys.art`,
+  url: `http://localhost:8000`,
   image: `/logos/logo@4.png`,
-  title: `🖐️ Web & Software Engineer. Currently working remotely from the mid west.`,
+  title: `🖐 Web & Software Engineer. Currently working remotely from the mid west.`,
   description: `💻 danydodson.dev | 🎨 danys.art | ♡ Dany Dodson`,
   copyright: `© 2021 | Dany Dodson ♡`,
 

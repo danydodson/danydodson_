@@ -8,6 +8,7 @@ module.exports = {
   siteMetadata: config,
 
   plugins: [
+    `gatsby-plugin-robots-txt`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     {

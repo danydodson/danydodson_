@@ -3,18 +3,20 @@ import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { css } from 'twin.macro'
-import { Layout } from '../components'
+import { Layout, Head } from '../components'
 
 // site.com/posts
 
 const PostsTemplate = ({ data }) => {
   const { body, frontmatter } = data.mdx
   const { title, date, description, cover, category, tags } = frontmatter
-
   const image = getImage(cover)
+  const seoImage = image.images.fallback.src
 
   return (
     <Layout>
+      <Head title={`💻 Post: ${title} `} description={description} image={seoImage} />
+
       <section>
 
         <article>
@@ -70,10 +72,7 @@ export const PostBySlugQuery = graphql`
         description
         cover {
           childImageSharp {
-            gatsbyImageData(
-              width: 400
-              placeholder: BLURRED
-            )
+            gatsbyImageData
           }
         }
         category
