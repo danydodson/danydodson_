@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-// import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Layout } from '../components'
 
 // site.com/posts/<post>
@@ -69,11 +68,6 @@ export const PostBySlug = graphql`
             description
             category
             tags
-            # cover {
-            #   childImageSharp {
-            #     gatsbyImageData(width: 700)
-            #   }
-            # }
           }
         }
       }
