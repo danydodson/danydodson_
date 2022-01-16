@@ -2,12 +2,12 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
-const Projects = () => {
+const Posts = () => {
 
   const data = useStaticQuery(graphql`
     {
-      projects: allMdx(
-        filter: { frontmatter: { template: { eq: "project" }, draft: { ne: true } } }
+      posts: allMdx(
+        filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
         sort: { fields: [frontmatter___date], order: DESC }
       ) {
         edges {
@@ -25,9 +25,8 @@ const Projects = () => {
                   gatsbyImageData
                 }
               }
-              github
-              external
-              tech
+              category
+              tags
             }
           }
         }
@@ -35,9 +34,9 @@ const Projects = () => {
     }
   `)
 
-  const projects = data.projects.edges.filter(({ node }) => node)
+  const posts = data.posts.edges.filter(({ node }) => node)
 
-  const projectInner = (node) => {
+  const postInner = (node) => {
     const { body, frontmatter } = node
     const { date } = frontmatter
 
@@ -51,13 +50,13 @@ const Projects = () => {
 
   return (
     <section>
-      {projects && projects.map(({ node }, i) => (
+      {posts && posts.map(({ node }, i) => (
         <article key={i}>
-          {projectInner(node)}
+          {postInner(node)}
         </article>
       ))}
     </section>
   )
 }
 
-export default Projects
+export default Posts
