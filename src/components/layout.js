@@ -6,7 +6,7 @@ import GlobalStyles from '../styles/global-styles'
 const Layout = ({ children, ...rest }) => (
   <>
     <Head />
-    <div css={styles.container({ hasBackground: false })} {...rest}>
+    <div css={styles.container({ hasBackground: true })} {...rest}>
       <GlobalStyles />
       {children}
     </div>

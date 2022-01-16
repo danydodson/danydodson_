@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from '../components'
 import { useForm } from '../hooks'
+
 import 'twin.macro'
 
 const Form = () => {
@@ -18,12 +19,12 @@ const Form = () => {
     >
 
       <div tw='flex flex-col mb-4'>
-        <label tw='mb-2 uppercase text-lg' htmlFor='email'>Email Address</label>
+        <label tw='mb-2 text-lg' htmlFor='email'>Email Address</label>
         <input type='email' name='email' id='email' autoComplete='email' onChange={handleChange} required />
       </div>
 
       <div tw='flex flex-col mb-4'>
-        <label tw='mb-2 uppercase text-lg' htmlFor='message'>Message</label>
+        <label tw='mb-2 text-lg' htmlFor='message'>Message</label>
         <input type='text' name='message' id='message' autoComplete='off' onChange={handleChange} required />
       </div>
 
