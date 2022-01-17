@@ -1,9 +1,10 @@
 module.exports = {
   theme: {
     extend: {
-      // fontFamily: {
-      //   'sans': ['Hans Kendrick', 'sans-serif']
-      // },
+      colors: {
+        electric: '#f19dff',
+        ribbon: '#acc3ff',
+      },
       backgroundColor: {
         primary: 'var(--bg-primary)',
         secondary: 'var(--bg-secondary)',
@@ -13,10 +14,6 @@ module.exports = {
         primary: 'var(--text-primary)',
         secondary: 'var(--text-secondary)',
         tertiary: 'var(--color-primary)'
-      },
-      colors: {
-        electric: '#f19dff',
-        ribbon: '#acc3ff',
       },
       borderRadius: {
         xs: '1px',
