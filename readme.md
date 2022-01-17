@@ -48,7 +48,7 @@ Describe your project
 :heavy_check_mark: Feature 2;\
 :heavy_check_mark: Feature 3;
 
-## :rocket: Technologies 
+## :rocket: Technologies
 
 The following tools were used in this project:
 
@@ -64,7 +64,7 @@ The following tools were used in this project:
 
 Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
 
-## :checkered_flag: Starting
+## :checkered_flag: Starting 🏁
 
 ```bash
 # Clone this project
