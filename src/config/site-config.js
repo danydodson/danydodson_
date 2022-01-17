@@ -1,6 +1,6 @@
 const config = {
 
-  url: `http://localhost:8000`,
+  url: `https://gitio.gatsbyjs.io`,
   image: `/logos/logo@4.png`,
   title: `🖐 Web & Software Engineer. Currently working remotely from the mid west.`,
   description: `💻 danydodson.dev | 🎨 danys.art | ♡ Dany Dodson`,

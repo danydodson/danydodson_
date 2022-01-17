@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { ThemeContext } from '../styles'
 
-const ThemeToggle = () => {
-  const { theme, setTheme } = React.useContext(ThemeContext)
+const Toggle = () => {
+  const { theme, setTheme } = useContext(ThemeContext)
 
   function isDark() {
     return theme === 'dark'
@@ -32,4 +32,4 @@ const Moon = () => (
   </svg>
 )
 
-export default ThemeToggle
+export default Toggle
