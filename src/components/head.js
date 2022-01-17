@@ -53,7 +53,7 @@ const Head = ({ title, description, image }) => {
       <meta property='twitter:image' content={seo.image} />
       <meta property='twitter:url' content={seo.url} />
 
-      <script data-goatcounter="https://danydodson.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+      {/* <script data-goatcounter="https://danydodson.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> */}
 
     </Helmet>
   )
