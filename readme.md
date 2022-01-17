@@ -1,7 +1,7 @@
 <div align="center" id="top"> 
   <img src="./.github/app.png" height="200" alt="danydodson.github.io" />
 
-  <!-- &#xa0; -->
+  <!-- &#xa0; --> 
 
   <!-- <a href="https://danydodsongithubio.netlify.app">Demo</a> -->
 </div>
