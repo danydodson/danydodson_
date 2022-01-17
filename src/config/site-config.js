@@ -1,6 +1,6 @@
 const config = {
 
-  url: `https://gitio.gatsbyjs.io`,
+  url: `https://danydodson-staging.herokuapp.com`,
   image: `/logos/logo@4.png`,
   title: `🖐 Web & Software Engineer. Currently working remotely from the mid west.`,
   description: `💻 danydodson.dev | 🎨 danys.art | ♡ Dany Dodson`,
