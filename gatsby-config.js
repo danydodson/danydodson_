@@ -10,6 +10,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -67,9 +68,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Dany Dodson`,
+        id: '/',
         start_url: `/`,
         short_name: `danydodson`,
+        name: `Dany Dodson`,
         theme_color: `#1b1f23`,
         background_color: `#fafffd`,
         icon: `src/assets/logos/logo@4x.png`,
