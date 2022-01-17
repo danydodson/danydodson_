@@ -68,12 +68,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        id: '/',
         start_url: `/`,
         short_name: `danydodson`,
         name: `Dany Dodson`,
-        theme_color: `#1b1f23`,
-        background_color: `#fafffd`,
+        theme_color: `#0f172a`,
+        background_color: `#0f172a`,
         icon: `src/assets/logos/logo@4x.png`,
         display: `minimal-ui`
       }
