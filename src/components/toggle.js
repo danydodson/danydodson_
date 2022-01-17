@@ -1,6 +1,4 @@
 import React from 'react'
-import 'twin.macro'
-
 import { ThemeContext } from '../styles'
 
 const ThemeToggle = () => {

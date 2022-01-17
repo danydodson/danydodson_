@@ -2,15 +2,21 @@
   "name": "danydodson.github.io",
   "version": "1.0.0",
   "author": "danydodson",
-  "description": "danydodson.github.io",
+  "description": "web",
   "private": true,
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop -H 0.0.0.0 -p 8000",
     "start": "gatsby develop",
+    "develop": "gatsby develop -H 0.0.0.0 -p 8000",
+    "build": "gatsby build",
     "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "clean": "gatsby clean"
+  },
+  "babelMacros": {
+    "twin": {
+      "preset": "emotion"
+    }
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",

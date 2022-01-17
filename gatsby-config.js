@@ -14,8 +14,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `static`,
-        path: `${__dirname}/static`
+        name: `assets`,
+        path: `${__dirname}/src/assets`
       }
     },
     {
@@ -73,7 +73,7 @@ module.exports = {
         short_name: `danydodson`,
         theme_color: `#1b1f23`,
         background_color: `#fafffd`,
-        icon: `static/logos/logo@4x.png`,
+        icon: `src/assets/logos/logo@4x.png`,
         display: `minimal-ui`,
       }
     }
