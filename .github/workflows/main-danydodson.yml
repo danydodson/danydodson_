@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Deploy to Azure
+name: Build and deploy Node.js app to Azure Web App - danydodson
 
 on:
   push:
@@ -23,9 +23,9 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          yarn install
-          yarn build --if-present
-
+          npm install
+          npm run build --if-present
+          npm run test --if-present
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     environment:
-      name: 'production'
+      name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
@@ -50,6 +50,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'danydodson'
-          slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_19c275939b8146f185987c572a30ccb9 }}
+          slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AA751739EC2B47D7B27CD88075DCAD06 }}
           package: .
