@@ -73,7 +73,7 @@ module.exports = {
         theme_color: `#1b1f23`,
         background_color: `#fafffd`,
         icon: `src/assets/logos/logo@4x.png`,
-        display: `minimal-ui`,
+        display: `minimal-ui`
       }
     }
   ]

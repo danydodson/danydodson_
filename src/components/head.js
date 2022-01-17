@@ -52,6 +52,9 @@ const Head = ({ title, description, image }) => {
       <meta property='twitter:description' content={seo.description} />
       <meta property='twitter:image' content={seo.image} />
       <meta property='twitter:url' content={seo.url} />
+
+      <script data-goatcounter="https://danydodson.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
     </Helmet>
   )
 }

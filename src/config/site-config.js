@@ -1,6 +1,6 @@
 const config = {
 
-  url: `https://danydodson-staging.herokuapp.com`,
+  url: `https://danydodson.dev`,
   image: `/logos/logo@4.png`,
   title: `🖐 Web & Software Engineer. Currently working remotely from the mid west.`,
   description: `💻 danydodson.dev | 🎨 danys.art | ♡ Dany Dodson`,
