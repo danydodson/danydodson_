@@ -59,7 +59,6 @@ The following tools were used in this project:
 - [Tailwind](https://tailwindcss.com/)
 - [Twin](https://github.com/ben-rogerson/twin.macro/)
 - [Emotion](https://emotion.sh/docs/introduction/)
-- [Docker](https://www.docker.com/)
 
 ## :white_check_mark: Requirements
 

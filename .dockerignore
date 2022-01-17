@@ -1,9 +1,0 @@
-**/.vscode
-**/.git
-**/node_modules
-**/.env.*
-**/.gitignore
-**/.dockerignore
-**/docker-compose*
-**/dockerfile*
-**/*.log
