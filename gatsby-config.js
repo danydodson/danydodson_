@@ -8,9 +8,9 @@ module.exports = {
   siteMetadata: config,
 
   plugins: [
+    `gatsby-plugin-offline`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
