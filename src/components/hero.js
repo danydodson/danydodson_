@@ -1,7 +1,5 @@
 import React from 'react'
 
-import 'twin.macro'
-
 const Hero = () => {
 
   return (
