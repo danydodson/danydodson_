@@ -1,9 +1,7 @@
 <div align="center" id="top"> 
   <img src="./.github/app.png" height="200" alt="danydodson.github.io" />
 
-  <!-- &#xa0; --> 
-
-  <!-- <a href="https://danydodsongithubio.netlify.app">Demo</a> -->
+  <a href="https://danydodson.netlify.app">Demo</a>  
 </div>
 
 <h1 align="center">danydodson.github.io</h1>
@@ -18,13 +16,7 @@
   <img alt="Github stars" src="https://img.shields.io/github/stars/danydodson/danydodson.github.io?color=56BEB8" />
 </p>
 
-<!-- Status -->
-
-<!-- <h4 align="center">
-	🚧  danydodson.github.io 🚀 Under construction...  🚧
-</h4>
-
-<hr> -->
+# 
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
@@ -38,17 +30,17 @@
 
 <br>
 
-## :dart: About
+## 🎯 About
 
 Describe your project
 
-## :sparkles: Features
+## ✨ Features
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+✔️ Feature 1;\
+✔️ Feature 2;\
+✔️ Feature 3;
 
-## :rocket: Technologies
+## 🚀 Technologies
 
 The following tools were used in this project:
 
@@ -60,11 +52,11 @@ The following tools were used in this project:
 - [Twin](https://github.com/ben-rogerson/twin.macro/)
 - [Emotion](https://emotion.sh/docs/introduction/)
 
-## :white_check_mark: Requirements
+## ✅ Requirements
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+Before starting 🏁, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
 
-## :checkered_flag: Starting 🏁
+## 🏁 Starting
 
 ```bash
 # Clone this project
@@ -82,11 +74,11 @@ $ yarn start
 # The server will initialize in the <http://localhost:8000>
 ```
 
-## :memo: License
+## 📝 License
 
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+This project is under license from MIT. For more details, see the [license](license.md) file.
 
-Made with :heart: by <a href="https://github.com/danydodson" target="_blank">Dany Dodson</a>
+Made with ❤️ by <a href="https://github.com/danydodson" target="_blank">Dany Dodson</a>
 
 &#xa0;
 
