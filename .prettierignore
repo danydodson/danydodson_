@@ -1,6 +1,8 @@
 /.cache
-/.yarn
-/public
+/.github
+/.netlify
+/.vscode
 /node_modules
+/public
 /package-lock.json
 /yarn.lock

@@ -1,12 +1,7 @@
 /.cache
+/.netlify
 /.vscode
 /node_modules
 /public
 /.env
 /*.log
-/.yarn/*
-!/.yarn/patches
-!/.yarn/plugins
-!/.yarn/releases
-!/.yarn/sdks
-!/.yarn/cache
