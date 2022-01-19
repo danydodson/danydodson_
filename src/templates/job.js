@@ -9,7 +9,7 @@ import { Layout, Seo } from '../components'
 
 const JobsTemplate = ({ data, location }) => {
   const { body, frontmatter } = data.mdx
-  const { title, company, description, cover, range, url } = frontmatter
+  const { title, date, company, description, cover, range, url } = frontmatter
 
   const { pathname } = location
 
@@ -18,7 +18,7 @@ const JobsTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <Seo title={`💻 Job: ${title} `} path={pathname} description={description} image={seoImage} />
+      <Seo title={`💻 Job: ${title} `} path={pathname} description={description} type='article' image={seoImage} date={date} />
 
       <section>
         <article>
@@ -67,7 +67,7 @@ export const JobBySlugQuery = graphql`
         template
         title
         slug
-        date(formatString: "MMM D YYYY")
+        date
         company
         description
         cover {

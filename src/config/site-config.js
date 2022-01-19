@@ -3,7 +3,6 @@ const config = {
   siteUrl: `https://danydodson.dev`,
   title: `🖐 Web & Software Engineer. Currently working remotely from the mid west.`,
   description: `💻 danydodson.dev | 🎨 danys.art | ♡ Dany Dodson`,
-  lang: `en`,
   image: `/logos/logo@4.png`,
   copyright: `© 2021 | Dany Dodson ♡`,
 

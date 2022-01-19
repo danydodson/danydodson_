@@ -1,7 +1,7 @@
 ---
 template: project
-date: 2018-12-18
-lastmod: 2018-12-18
+date: 2018-12-18T00:00:00.000Z
+lastmod: 2018-12-18T00:00:00.000Z
 title: Spotify Profile
 slug: /projects/spotify-profile
 draft: false

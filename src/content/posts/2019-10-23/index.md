@@ -2,8 +2,8 @@
 template: post
 title: Account Surfer gets Microsoft Award
 slug: /posts/account-surfer-gets-microsoft-award
-date: 2019-10-23
-lastmod: 2019-10-23
+date: 2019-10-23T00:00:00.000Z
+lastmod: 2019-10-23T00:00:00.000Z
 draft: false
 cover: cover.webp
 description: Account Surfer became "3rd in Best Business or Consumer Value" at Microsoft 365 app award

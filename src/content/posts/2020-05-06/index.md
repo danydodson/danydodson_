@@ -2,8 +2,8 @@
 template: post
 title: Reverse interview
 slug: /posts/reverse-interview
-date: 2020-05-06
-lastmod: 2020-05-06
+date: 2020-05-06T00:00:00.000Z
+lastmod: 2020-05-06T00:00:00.000Z
 draft: false
 cover: cover.webp
 description: List of the questions from dev to the company.
