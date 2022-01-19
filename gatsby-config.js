@@ -6,11 +6,8 @@ module.exports = {
   siteMetadata: config,
 
   plugins: [
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-offline`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -53,7 +50,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-remark-images`,
-    `gatsby-plugin-graphql-config`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -75,6 +71,16 @@ module.exports = {
         ]
       }
     },
+    `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-graphql-config`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `sitemap.xml`,
+      }
+    },
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
