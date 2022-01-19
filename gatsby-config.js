@@ -41,11 +41,11 @@ module.exports = {
     {
       resolve: `gatsby-source-cloudinary`,
       options: {
-        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
         apiKey: process.env.CLOUDINARY_API_KEY,
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
         apiSecret: process.env.CLOUDINARY_API_SECRET,
         resourceType: `image`,
-        prefix: `danydodson/`
+        prefix: `danydodson/`,
       }
     },
     `gatsby-plugin-image`,
@@ -84,16 +84,6 @@ module.exports = {
         background_color: `#0f172a`,
         icon: `src/assets/logos/logo@4x.png`,
         display: `minimal-ui`
-      }
-    },
-    {
-      resolve: "gatsby-build-newrelic",
-      options: {
-        SITE_NAME: 'danydodson-dev',
-        NR_ACCOUNT_ID: process.env.NEW_RELIC_ACCOUNT_ID,
-        NR_INSERT_KEY: process.env.NEW_RELIC_INSERT_KEY || '',
-        NR_LICENSE_KEY: process.env.NEW_RELIC_LICENSE_KEY || '',
-        customTags: { gatsbySite: true }
       }
     }
   ]
