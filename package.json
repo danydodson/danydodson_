@@ -8,7 +8,8 @@
   "scripts": {
     "start": "yarn run develop",
     "develop": "gatsby develop -H 0.0.0.0 -p 8000",
-    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build",
+    "build": "gatsby build",
+    "build-dc": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build",
     "build-nr": "gatsby build --open-tracing-config-file ./node_modules/gatsby-build-newrelic/zipkin-local.js --graphql-tracing",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
