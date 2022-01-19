@@ -7,7 +7,7 @@ export default function useSiteMetadata() {
       query SiteMetadataQuery {
         site {
           siteMetadata {
-            url
+            siteUrl
             image
             title
             description

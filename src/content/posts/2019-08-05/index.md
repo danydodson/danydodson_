@@ -5,7 +5,7 @@ slug: /posts/chrome-profiles
 date: 2019-08-05
 lastmod: 2019-08-05
 draft: false
-cover: cover.png
+cover: cover.webp
 description: Quickly switch between accounts and browsers on Windows with Account Surfer.
 category: Productivity
 tags: 

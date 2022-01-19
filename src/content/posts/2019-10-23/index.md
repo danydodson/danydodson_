@@ -5,7 +5,7 @@ slug: /posts/account-surfer-gets-microsoft-award
 date: 2019-10-23
 lastmod: 2019-10-23
 draft: false
-cover: cover.png
+cover: cover.webp
 description: Account Surfer became "3rd in Best Business or Consumer Value" at Microsoft 365 app award
 category: Productivity
 tags: 

@@ -5,7 +5,7 @@ slug: /posts/fix-chrome-scroll-flickering
 date: 2020-02-08
 lastmod: 2020-02-08
 draft: false
-cover: cover.png
+cover: cover.webp
 description: If you faced with scrolling issues in Chrome - disable this flag ```chrome://flags/#disable-threaded-scrolling```
 category: Productivity
 tags: 

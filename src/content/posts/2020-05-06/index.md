@@ -5,7 +5,7 @@ slug: /posts/reverse-interview
 date: 2020-05-06
 lastmod: 2020-05-06
 draft: false
-cover: cover.png
+cover: cover.webp
 description: List of the questions from dev to the company.
 category: Programming
 tags: 

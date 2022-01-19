@@ -2,7 +2,7 @@
 /.vscode
 /node_modules
 /public
-/*.env.*
+/.env
 /*.log
 /.yarn/*
 !/.yarn/patches

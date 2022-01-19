@@ -5,7 +5,7 @@ slug: /posts/petition-ban-anti-vaccination-propaganda
 date: 2020-04-28
 lastmod: 2020-04-28
 draft: false
-cover: cover.png
+cover: cover.webp
 description: All the largest online social networks (Facebook/Youtube/Instagram/Twitter) should ban Anti-Vaccination posts and users.
 category: Healthcare
 tags: 

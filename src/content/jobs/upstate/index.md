@@ -4,7 +4,7 @@ title: Engineer
 date: 2021-09-28T00:00:00.000Z
 draft: false
 slug: /jobs/engineer-at-upstate
-cover: cover.jpg
+cover: cover.webp
 company: Upstate
 location: Boston, MA
 range: May 2018 - Present

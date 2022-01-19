@@ -5,7 +5,7 @@ slug: /posts/autoplay-twitter-videos-with-sound
 date: 2020-01-31
 lastmod: 2020-01-31
 draft: false
-cover: cover.png
+cover: cover.webp
 description: It might be annoying scroll Twitter videos and click on each to hear sound. Here is the quick hack.
 category: Productivity
 tags: 

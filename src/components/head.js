@@ -11,7 +11,7 @@ const Head = ({ title, description, image }) => {
           defaultTitle: title
           defaultDescription: description
           defaultImage: image
-          url
+          siteUrl
           author {
             username
           }
@@ -20,13 +20,13 @@ const Head = ({ title, description, image }) => {
     }
   `)
 
-  const { defaultTitle, defaultDescription, defaultImage, author, url } = site.siteMetadata
+  const { defaultTitle, defaultDescription, defaultImage, author, siteUrl } = site.siteMetadata
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image: `${url}${image || defaultImage}`,
-    url: `${url}`
+    image: `${siteUrl}${image || defaultImage}`,
+    url: `${siteUrl}`
   }
 
   return (

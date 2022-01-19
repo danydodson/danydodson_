@@ -5,7 +5,7 @@ slug: /posts/chrome-custom-js-and-css-extension
 date: 2020-04-18
 lastmod: 2020-04-18
 draft: false
-cover: cover.png
+cover: cover.webp
 description: Chrome custom JS and CSS extension
 category: Productivity
 tags: 
