@@ -1,27 +1,17 @@
-import tw, { styled, css, theme } from 'twin.macro'
+import tw, { styled } from 'twin.macro'
 
 const Button = styled.button(({ variant, isSmall }) => [
 
-  tw`px-8 py-2 rounded focus:outline-none transform duration-75`,
+  tw`text-primary opacity-90`,
 
-  tw`hocus:(scale-105 text-yellow-400)`,
+  tw`focus:outline-none transform duration-75`,
 
-  variant === 'primary' && tw`bg-black text-white border-black`,
+  tw`hover:(scale-105 text-yellow-300 opacity-100)`,
 
-  variant === 'secondary' && [
-    css`
-      box-shadow: 0 0.1em 0 0 rgba(0, 0, 0, 0.25);
-      `,
-    tw`border-2 border-r-yellow-600`,
-  ],
-  
-  variant === 'tertiary' && tw`bg-black text-white border-black`,
+  variant === 'icon' && tw`w-6 h-6 fill-current`,
 
   isSmall ? tw`text-sm` : tw`text-lg`,
 
-  css`
-    color: ${theme`colors.white`};
-  `,
 ])
 
 export default Button

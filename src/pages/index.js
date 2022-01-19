@@ -1,5 +1,6 @@
 import React from 'react'
 import tw from 'twin.macro'
+import { Icon } from '../components/icons'
 
 import {
   Layout,
@@ -15,6 +16,7 @@ const IndexPage = () => (
     <main css={styles.container({ hasBackground: false })}>
       <Toggle />
       <Hero />
+      <Icon name='Moon' />
       {/* <Posts /> */}
       {/* <Projects /> */}
       {/* <Form /> */}

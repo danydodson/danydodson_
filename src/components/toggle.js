@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { ThemeContext } from '../styles'
+import { Button } from '../components'
 
 const Toggle = () => {
   const { theme, setTheme } = useContext(ThemeContext)
@@ -10,12 +11,12 @@ const Toggle = () => {
 
   return (
 
-    <button
-      tw='w-6 h-6 focus:outline-none fill-current text-primary hover:text-secondary'
+    <Button
+      variant='icon'
       onClick={() => setTheme(isDark() ? 'light' : 'dark')}
     >
       {isDark() ? <Moon /> : <Sun />}
-    </button>
+    </Button>
 
   )
 }
