@@ -8,6 +8,8 @@ module.exports = {
   plugins: [
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-graphql-config`,
+    `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -71,16 +73,9 @@ module.exports = {
         ]
       }
     },
-    `gatsby-plugin-gatsby-cloud`,
-    `gatsby-plugin-graphql-config`,
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        output: `sitemap.xml`,
-      }
-    },
-    `gatsby-plugin-robots-txt`,
     `gatsby-plugin-offline`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
