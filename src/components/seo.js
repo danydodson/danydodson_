@@ -21,6 +21,7 @@ const Seo = ({ path, title, description, image, type, date, lastmod, tags }) => 
     }
   `)
 
+
   const { siteUrl, defaultTitle, defaultDescription, defaultImage, author } = site.siteMetadata
 
   const seo = {

@@ -13,8 +13,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `assets`,
-        path: `${__dirname}/src/assets`
+        name: `static`,
+        path: `${__dirname}/static`
       }
     },
     {
@@ -84,7 +84,7 @@ module.exports = {
         name: `Dany Dodson`,
         theme_color: `#0f172a`,
         background_color: `#0f172a`,
-        icon: `src/assets/logos/logo@1x.png`,
+        icon: `static/logos/logo@1x.png`,
         display: `minimal-ui`
       }
     }
