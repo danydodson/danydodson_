@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { Layout, Head } from '../components'
+import { Layout, Seo } from '../components'
 
 // site.com/posts/<post>
 
@@ -14,7 +14,7 @@ const PostTemplate = ({ data, pageContext, location }) => {
 
   return (
     <Layout location={location}>
-      <Head title={`💻 Posts List `} path={pathname} description={pageTitle} />
+      <Seo title={`💻 Posts List `} path={pathname} description={pageTitle} />
 
       <section>
 

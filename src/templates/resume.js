@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, Head } from '../components'
+import { Layout, Seo } from '../components'
 // import { useSiteMetadata } from '../hooks'
 // import CV from '../components/CV'
 
@@ -9,7 +9,7 @@ const ResumeTemplate = ({ location }) => {
 
   return (
     <Layout location={location}>
-      <Head title={`📝 Resume `} path={pathname} />
+      <Seo title={`📝 Resume `} path={pathname} />
 
       {/* <CV /> */}
     </Layout>

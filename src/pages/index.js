@@ -1,13 +1,14 @@
 import React from 'react'
 import tw from 'twin.macro'
-import { Layout, Head, Toggle, Hero, } from './../components'
+
+import { Layout, Seo, Toggle, Hero, } from './../components'
 
 const IndexPage = ({ location }) => {
   const { pathname } = location
 
   return (
     <Layout location={location}>
-      <Head path={pathname} />
+      <Seo path={pathname} />
 
       <main css={styles.container({ hasBackground: false })}>
         <Toggle />

@@ -1,13 +1,13 @@
 import React from 'react'
 
-import { Head, Layout } from '../components'
+import { Layout, Seo } from '../components'
 
 const IndexPage = ({ location }) => {
   const { pathname } = location
 
   return (
     <Layout location={location}>
-      <Head path={pathname} />
+      <Seo path={pathname} />
 
       <section>
         <h1>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import { Layout, Head } from '../components'
+import { Layout, Seo } from '../components'
 
 // site.com/category/<category>
 
@@ -14,7 +14,7 @@ const CategoryTemplate = ({ data, pageContext, location }) => {
 
   return (
     <Layout location={location}>
-      <Head title={`💻 ${pageTitle} `} path={pathname} description={pageTitle} />
+      <Seo title={`💻 Category: ${pageTitle} `} path={pathname} description={pageTitle} />
 
       <section>
 

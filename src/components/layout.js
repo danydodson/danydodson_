@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
-import { Head } from '../components'
+import PropTypes from 'prop-types'
+import { Seo } from '../components'
 import { GlobalStyles } from '../styles'
 
 const Layout = ({ children, location, ...rest }) => {
@@ -17,13 +18,18 @@ const Layout = ({ children, location, ...rest }) => {
 
   return (
     <>
-      <Head />
+      <Seo />
       <div {...rest}>
         <GlobalStyles />
         {children}
       </div>
     </>
   )
+}
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+  location: PropTypes.object.isRequired,
 }
 
 export default Layout

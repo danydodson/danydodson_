@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { css } from 'twin.macro'
-import { Layout, Head } from '../components'
+import { Layout, Seo } from '../components'
 
 // site.com/jobs/<job>
 
@@ -18,7 +18,7 @@ const JobsTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <Head title={`💻 Job: ${title} `} path={pathname} description={description} image={seoImage} />
+      <Seo title={`💻 Job: ${title} `} path={pathname} description={description} image={seoImage} />
 
       <section>
         <article>

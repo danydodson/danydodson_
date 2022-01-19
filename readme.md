@@ -1,7 +1,7 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.png" height="200" alt="danydodson.github.io" />
+  <img src="./.github/app.png" height="200" alt="danydodson.dev" />
 
-  <a href="https://danydodson.netlify.app">Demo</a>  
+  <a href="https://danydodson.dev">Demo</a>  
 </div>
 
 <h1 align="center">danydodson.github.io</h1>
@@ -15,8 +15,6 @@
   <img alt="Github forks" src="https://img.shields.io/github/forks/danydodson/danydodson.github.io?color=56BEB8" />
   <img alt="Github stars" src="https://img.shields.io/github/stars/danydodson/danydodson.github.io?color=56BEB8" />
 </p>
-
-# 
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
@@ -32,7 +30,7 @@
 
 ## 🎯 About
 
-Describe your project
+Portfolio & Blog
 
 ## ✨ Features
 
@@ -48,7 +46,7 @@ The following tools were used in this project:
 - [React](https://pt-br.reactjs.org/)
 - [Node.js](https://nodejs.org/en/)
 - [Mdx](https://mdxjs.com/)
-- [Tailwind](https://tailwindcss.com/)
+- [TailwindCSS](https://tailwindcss.com/)
 - [Twin](https://github.com/ben-rogerson/twin.macro/)
 - [Emotion](https://emotion.sh/docs/introduction/)
 

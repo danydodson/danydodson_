@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
-const Head = ({ title, path, description, image }) => {
+const Seo = ({ path, title, description, image }) => {
 
   const { site } = useStaticQuery(graphql`
     query {
@@ -23,8 +24,8 @@ const Head = ({ title, path, description, image }) => {
   const { siteUrl, defaultTitle, defaultDescription, defaultImage, author } = site.siteMetadata
 
   const seo = {
-    title: title || defaultTitle,
     url: `${siteUrl}${path || siteUrl}`,
+    title: title || defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image || defaultImage}`
   }
@@ -57,4 +58,11 @@ const Head = ({ title, path, description, image }) => {
   )
 }
 
-export default Head
+Seo.propTypes = {
+  path: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string
+}
+
+export default Seo

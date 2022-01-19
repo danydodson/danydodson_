@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { Layout, Head } from '../components'
+import { Layout, Seo } from '../components'
 
 // site.com/categories
 
@@ -12,7 +12,7 @@ const CategoriesTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <Head title={`💻 ${description} `} path={pathname} description={description} />
+      <Seo title={`💻 ${description} `} path={pathname} description={description} />
 
       <section>
 
