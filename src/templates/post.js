@@ -22,6 +22,35 @@ const PostsTemplate = ({ data, location }) => {
 
       <section>
 
+        <div
+          className='fb-like'
+          data-href={`https://danydodson.dev/${pathname}`}
+          data-share='true'
+          data-action='like'
+          data-layout='standard'
+          data-width='450'
+          data-size='small'
+          data-show-faces='true'
+        />
+
+        {/* 
+        <div
+          className='fb-share-button'
+          data-href={`https://danydodson.dev${pathname}`}
+          data-layout='button'
+          data-size='small'
+        >
+          <a
+            className='fb-xfbml-parse-ignore'
+            href={`https://www.facebook.com/sharer/sharer.php?u=https://danydodson.dev${pathname}&amp;src=sdkpreparse`}
+            rel='noopener noreferrer'
+            target='_blank'
+          >
+            Share
+          </a>
+        </div> 
+        */}
+
         <article>
           <h2>{title}</h2>
           <br />

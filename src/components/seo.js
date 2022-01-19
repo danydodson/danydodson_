@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
@@ -21,7 +20,6 @@ const Seo = ({ path, title, description, image, type, date, lastmod, tags }) => 
     }
   `)
 
-
   const { siteUrl, defaultTitle, defaultDescription, defaultImage, author } = site.siteMetadata
 
   const seo = {
@@ -31,7 +29,7 @@ const Seo = ({ path, title, description, image, type, date, lastmod, tags }) => 
     image: `${siteUrl}${image || defaultImage}`,
     type: type || 'website',
     date: date || null,
-    lastmod: lastmod || date,
+    lastmod: lastmod || null,
     tags: tags || [],
   }
 
@@ -56,12 +54,11 @@ const Seo = ({ path, title, description, image, type, date, lastmod, tags }) => 
       <meta property='og:image' content={seo.image} />
       <meta property='og:image:alt' content={seo.title} />
       <meta property='og:type' content={seo.type} />
+
+      {/* Article Tags */}
       <meta property='article:published_time' content={seo.date} />
       <meta property='article:modified_time' content={seo.lastmod} />
       <meta property='article:tag' content={[seo.tags]} />
-
-      {/* For Facebook Insights */}
-      <meta property='fb:app_id' content='478714590211729' />
 
       {/* Twitter Tags */}
       <meta name='twitter:url' content={seo.url} />
@@ -83,19 +80,13 @@ const Seo = ({ path, title, description, image, type, date, lastmod, tags }) => 
       <meta name='apple-mobile-web-app-capable' content='yes' />
       <meta name='apple-mobile-web-app-status-bar-style' content='default' />
 
+      {/* For Facebook Insights */}
+      <meta property='fb:app_id' content='478714590211729' />
+      
+      <script async defer crossorigin='anonymous' src='https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0&appId=478714590211729&autoLogAppEvents=1' nonce='gIldAg2n' />
+
     </Helmet>
   )
-}
-
-Seo.propTypes = {
-  path: PropTypes.string,
-  title: PropTypes.string,
-  description: PropTypes.string,
-  image: PropTypes.string,
-  type: PropTypes.string,
-  date: PropTypes.instanceOf(Date),
-  lastmod: PropTypes.instanceOf(Date),
-  tags: PropTypes.array,
 }
 
 export default Seo
