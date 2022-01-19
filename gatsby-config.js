@@ -45,7 +45,7 @@ module.exports = {
         cloudName: process.env.CLOUDINARY_CLOUD_NAME,
         apiSecret: process.env.CLOUDINARY_API_SECRET,
         resourceType: `image`,
-        prefix: `danydodson/`,
+        prefix: `assets/`
       }
     },
     `gatsby-plugin-image`,
