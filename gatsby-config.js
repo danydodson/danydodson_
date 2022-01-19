@@ -84,7 +84,7 @@ module.exports = {
         name: `Dany Dodson`,
         theme_color: `#0f172a`,
         background_color: `#0f172a`,
-        icon: `src/assets/logos/logo@4x.png`,
+        icon: `src/assets/logos/logo@1x.png`,
         display: `minimal-ui`
       }
     }
