@@ -1,14 +1,19 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { Layout } from '../components'
+import { Layout, Head } from '../components'
 
 // site.com/tags
 
 const TagsTemplate = ({ data, location }) => {
   const tags = data.allMdx.group
+  const { pathname } = location
+
+  const description = 'Tags List'
 
   return (
-    <Layout>
+    <Layout location={location}>
+      <Head title={`💻 ${description} `} path={pathname} description={description} />
+
       <section>
 
         <h2>All Tags</h2>

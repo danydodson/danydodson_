@@ -20,7 +20,6 @@ module.exports = async (graphql, actions) => {
 
   const { postsPerPage } = siteConfig
   const numPages = Math.ceil(result.data.allMdx.totalCount / postsPerPage)
-  // const postsSlug = `/posts`
 
   for (let i = 0; i < numPages; i += 1) {
     createPage({

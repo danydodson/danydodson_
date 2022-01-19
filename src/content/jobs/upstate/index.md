@@ -6,7 +6,7 @@ draft: false
 slug: /jobs/engineer-at-upstate
 cover: cover.webp
 company: Upstate
-location: Boston, MA
+map: Boston, MA
 range: May 2018 - Present
 url: https://www.upstatement.com/
 description: Write modern, performant, maintainable code for a diverse array of client and internal projects

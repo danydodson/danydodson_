@@ -1,14 +1,19 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { Layout } from '../components'
+import { Layout, Head } from '../components'
 
 // site.com/categories
 
 const CategoriesTemplate = ({ data, location }) => {
   const categories = data.allMdx.group
+  const { pathname } = location
+
+  const description = 'Site Categories'
 
   return (
-    <Layout>
+    <Layout location={location}>
+      <Head title={`💻 ${description} `} path={pathname} description={description} />
+
       <section>
 
         <h2>All Catagories</h2>

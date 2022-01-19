@@ -2,16 +2,16 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
-const Head = ({ title, description, image }) => {
+const Head = ({ title, path, description, image }) => {
 
   const { site } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
+          siteUrl
           defaultTitle: title
           defaultDescription: description
           defaultImage: image
-          siteUrl
           author {
             username
           }
@@ -20,13 +20,13 @@ const Head = ({ title, description, image }) => {
     }
   `)
 
-  const { defaultTitle, defaultDescription, defaultImage, author, siteUrl } = site.siteMetadata
+  const { siteUrl, defaultTitle, defaultDescription, defaultImage, author } = site.siteMetadata
 
   const seo = {
     title: title || defaultTitle,
+    url: `${siteUrl}${path || siteUrl}`,
     description: description || defaultDescription,
-    image: `${siteUrl}${image || defaultImage}`,
-    url: `${siteUrl}`
+    image: `${siteUrl}${image || defaultImage}`
   }
 
   return (
@@ -36,7 +36,7 @@ const Head = ({ title, description, image }) => {
       <meta name='image' content={seo.image} />
       <meta name='description' content={seo.description} />
 
-      <link rel='canonical' href={'https://danydodson.dev/'} />
+      <link rel='canonical' href={seo.url} />
 
       <meta property='og:title' content={seo.title} />
       <meta property='og:description' content={seo.description} />
@@ -52,8 +52,6 @@ const Head = ({ title, description, image }) => {
       <meta property='twitter:description' content={seo.description} />
       <meta property='twitter:image' content={seo.image} />
       <meta property='twitter:url' content={seo.url} />
-
-      {/* <script data-goatcounter="https://danydodson.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> */}
 
     </Helmet>
   )

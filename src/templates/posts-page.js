@@ -1,17 +1,20 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { Layout } from '../components'
+import { Layout, Head } from '../components'
 
 // site.com/posts/<post>
 
-const PostTemplate = ({ data, pageContext }) => {
+const PostTemplate = ({ data, pageContext, location }) => {
   const { categories, currentPage } = pageContext
   const { edges } = data.allMdx
 
-  const pageTitle = currentPage > 0 ? `Posts - Page ${currentPage} ` : `Posts `
+  const { pathname } = location
+
+  const pageTitle = currentPage > 0 ? `Posts List - Page ${currentPage} ` : `Posts List `
 
   return (
-    <Layout>
+    <Layout location={location}>
+      <Head title={`💻 Posts List `} path={pathname} description={pageTitle} />
 
       <section>
 
@@ -29,8 +32,8 @@ const PostTemplate = ({ data, pageContext }) => {
           ))}
         </ul>
 
-        <br/>
-        
+        <br />
+
         <h2>All Categories</h2>
 
         <ul>

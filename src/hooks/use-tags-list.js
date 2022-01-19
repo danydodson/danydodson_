@@ -1,6 +1,7 @@
 import { useStaticQuery, graphql } from 'gatsby'
 
-const useTagsList = () => {
+export default function useTagsList() {
+
   const { allMdx } = useStaticQuery(
     graphql`
       query TagsListQuery {
@@ -19,4 +20,3 @@ const useTagsList = () => {
   return allMdx.group
 }
 
-export default useTagsList

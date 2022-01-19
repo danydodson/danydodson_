@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import { Layout } from '../components'
+import { Layout, Head } from '../components'
 
 // site.com/category/<category>
 
@@ -8,12 +8,14 @@ const CategoryTemplate = ({ data, pageContext, location }) => {
   const { categories, category, currentPage } = pageContext
   const { edges } = data.allMdx
 
-  // const description = edges.map(edge => edge.node.fields.description)
+  const { pathname } = location
 
   const pageTitle = currentPage > 0 ? `Category: ${category} - Page ${currentPage} ` : `Category: ${category} `
 
   return (
-    <Layout>
+    <Layout location={location}>
+      <Head title={`💻 ${pageTitle} `} path={pathname} description={pageTitle} />
+
       <section>
 
         <h2>
@@ -32,7 +34,7 @@ const CategoryTemplate = ({ data, pageContext, location }) => {
           ))}
         </ul>
 
-        <br/>
+        <br />
 
         <h2>all categories:</h2>
 

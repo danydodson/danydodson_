@@ -1,26 +1,21 @@
 import React from 'react'
 import tw from 'twin.macro'
+import { Layout, Head, Toggle, Hero, } from './../components'
 
-import {
-  Layout,
-  Toggle,
-  Hero,
-  // Projects,
-  // Posts,
-  // Form
-} from './../components'
+const IndexPage = ({ location }) => {
+  const { pathname } = location
 
-const IndexPage = () => (
-  <Layout>
-    <main css={styles.container({ hasBackground: false })}>
-      <Toggle />
-      <Hero />
-      {/* <Posts /> */}
-      {/* <Projects /> */}
-      {/* <Form /> */}
-    </main>
-  </Layout>
-)
+  return (
+    <Layout location={location}>
+      <Head path={pathname} />
+
+      <main css={styles.container({ hasBackground: false })}>
+        <Toggle />
+        <Hero />
+      </main>
+    </Layout>
+  )
+}
 
 export default IndexPage
 

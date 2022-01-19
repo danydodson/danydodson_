@@ -7,15 +7,18 @@ import { Layout, Head } from '../components'
 
 // site.com/posts
 
-const PostsTemplate = ({ data }) => {
+const PostsTemplate = ({ data, location }) => {
   const { body, frontmatter } = data.mdx
   const { title, date, description, cover, category, tags } = frontmatter
+
+  const { pathname } = location
+
   const image = getImage(cover)
   const seoImage = image.images.fallback.src
 
   return (
-    <Layout>
-      <Head title={`💻 Post: ${title} `} description={description} image={seoImage} />
+    <Layout location={location}>
+      <Head title={`💻 Post: ${title} `} path={pathname} description={description} image={seoImage} />
 
       <section>
 

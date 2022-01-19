@@ -7,7 +7,7 @@ draft: false
 cover: cover.webp
 company: Apple
 description: Developed and shipped highly interactive web applications for Apple Music using Ember.js
-location: "Cupertino, CA"
+map: Cupertino, CA
 range: July - December 2017
 url: https://www.apple.com/music/
 ---

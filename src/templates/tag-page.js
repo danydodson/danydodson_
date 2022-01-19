@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import { Layout } from '../components'
+import { Layout, Head } from '../components'
 
 // site.com/tag/<tag>
 
@@ -8,10 +8,13 @@ const TagTemplate = ({ data, pageContext, location }) => {
   const { tag, categories, currentPage } = pageContext
   const { edges } = data.allMdx
 
+  const { pathname } = location
+
   const pageTitle = currentPage > 0 ? `Tagged: #${tag} - Page ${currentPage} ` : `Tagged: #${tag} `
 
   return (
-    <Layout>
+    <Layout location={location}>
+      <Head title={`💻 ${pageTitle} `} path={pathname} description={pageTitle} />
 
       <section>
 
@@ -29,8 +32,8 @@ const TagTemplate = ({ data, pageContext, location }) => {
           ))}
         </ul>
 
-        <br/>
-        
+        <br />
+
         <h2>all categories:</h2>
 
         <ul>

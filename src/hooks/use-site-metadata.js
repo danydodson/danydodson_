@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 
 export default function useSiteMetadata() {
 
@@ -18,18 +18,8 @@ export default function useSiteMetadata() {
               email
               image
               bio
-              location
+              
             }
-            socials {
-              name
-              url
-            }
-            navLinks {
-              name
-              path
-            }
-            skills
-            postsPerPage
           }
         }
       }

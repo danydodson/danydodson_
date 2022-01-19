@@ -7,15 +7,18 @@ import { Layout, Head } from '../components'
 
 // site.com/projects/<project>
 
-const ProjectsTemplate = ({ data }) => {
+const ProjectsTemplate = ({ data, location }) => {
   const { body, frontmatter } = data.mdx
   const { title, date, description, cover, github, external, tech } = frontmatter
+
+  const { pathname } = location
+
   const image = getImage(cover)
   const seoImage = image.images.fallback.src
 
   return (
-    <Layout>
-      <Head title={`💻 Project: ${title} `} description={description} image={seoImage} />
+    <Layout location={location}>
+      <Head title={`💻 Project: ${title} `} path={pathname} description={description} image={seoImage} />
 
       <section>
         <article>

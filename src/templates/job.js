@@ -7,15 +7,18 @@ import { Layout, Head } from '../components'
 
 // site.com/jobs/<job>
 
-const JobsTemplate = ({ data }) => {
+const JobsTemplate = ({ data, location }) => {
   const { body, frontmatter } = data.mdx
-  const { title, company, description, cover, location, range, url } = frontmatter
+  const { title, company, description, cover, range, url } = frontmatter
+
+  const { pathname } = location
+
   const image = getImage(cover)
   const seoImage = image.images.fallback.src
 
   return (
-    <Layout>
-      <Head title={`💻 Job: ${title} `} description={description} image={seoImage} />
+    <Layout location={location}>
+      <Head title={`💻 Job: ${title} `} path={pathname} description={description} image={seoImage} />
 
       <section>
         <article>
@@ -37,7 +40,6 @@ const JobsTemplate = ({ data }) => {
           <h2>{description}</h2>
           <br />
           {/* <GatsbyImage image={image} alt={category} /> */}
-          <p>{location}</p>
           <br />
           <p>{range}</p>
           <br />
@@ -73,7 +75,6 @@ export const JobBySlugQuery = graphql`
             gatsbyImageData
           }
         }
-        location
         range
         url
       }

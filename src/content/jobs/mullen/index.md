@@ -6,7 +6,7 @@ draft: false
 slug: /jobs/creative-technologist-at-mullen
 cover: cover.webp
 company: MullenLowe
-location: Boston, MA
+map: Boston, MA
 range: July - December 2015
 url: https://us.mullenlowe.com/
 description: Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery
