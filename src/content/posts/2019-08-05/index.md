@@ -2,8 +2,9 @@
 template: post
 title: Chrome profiles
 slug: /posts/chrome-profiles
-date: 2019-08-05T00:00:00.000Z
-lastmod: 2019-08-05T00:00:00.000Z
+date: 2019-08-05T00:00:00
+published: 2019-08-05T00:00:00
+lastmod: 2019-08-05T00:00:00
 draft: false
 cover: cover.webp
 description: Quickly switch between accounts and browsers on Windows with Account Surfer.

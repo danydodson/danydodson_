@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
-const Seo = ({ path, title, description, image, type }) => {
+const Seo = ({ path, title, description, image, type, published, lastmod }) => {
 
   const { site } = useStaticQuery(graphql`
     query {
@@ -28,7 +28,9 @@ const Seo = ({ path, title, description, image, type }) => {
     title: title || defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image || defaultImage}`,
-    type: type || defaultType
+    type: type || defaultType,
+    published: published || '',
+    lastmod: lastmod || ''
   }
 
   return (
@@ -50,12 +52,12 @@ const Seo = ({ path, title, description, image, type }) => {
       <meta property='og:site_name' content='Dany Dodson' />
       <meta property='article:publisher' content='https://danydodson.dev' />
       <meta property='og:image' content={seo.image} />
-      {/* <meta property='og:image:width' content='450' /> */}
-      {/* <meta property='og:image:height ' content='700' /> */}
+      <meta property='og:image:width' content='450' />
+      <meta property='og:image:height ' content='700' />
 
-      {/* UTC seconds */}
-      {/* <meta name='article:published_time' content='1431556620' /> */}
-      {/* <meta name='article:modified_time' content='1431556620' /> */}
+      <meta name='article:author' content={author.username} />
+      <meta name='article:published_time' content={seo.published} />
+      <meta name='article:modified_time' content={seo.lastmod} />
 
       <meta property='fb:app_id' content='301953321955514' />
 

@@ -9,7 +9,7 @@ import { Layout, Seo } from '../components'
 
 const PostsTemplate = ({ data, location }) => {
   const { body, frontmatter } = data.mdx
-  const { title, date, description, cover, category, tags } = frontmatter
+  const { title, date, published, lastmod, description, cover, category, tags } = frontmatter
 
   const { pathname } = location
 
@@ -18,7 +18,7 @@ const PostsTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <Seo title={`💻 Post: ${title} `} path={pathname} description={description} type='article' image={seoImage} />
+      <Seo title={`💻 Post: ${title} `} path={pathname} description={description} type='article' image={seoImage} published={published} lastmod={lastmod} />
 
       <section>
 
@@ -70,7 +70,9 @@ export const PostBySlugQuery = graphql`
       }
       frontmatter {
         title
-        date
+        date(formatString: "MMM D YYYY")
+        published(formatString: "X")
+        lastmod(formatString: "X")
         description
         cover {
           childImageSharp {
