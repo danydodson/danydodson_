@@ -12,6 +12,7 @@ export default function useSiteMetadata() {
             title
             description
             copyright
+            type
             author {
               name
               username

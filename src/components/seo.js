@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
-const Seo = ({ path, title, description, image, type, date, lastmod, tags }) => {
+const Seo = ({ path, title, description, image, type }) => {
 
   const { site } = useStaticQuery(graphql`
     query {
@@ -12,6 +12,7 @@ const Seo = ({ path, title, description, image, type, date, lastmod, tags }) => 
           defaultTitle: title
           defaultDescription: description
           defaultImage: image
+          defaultType: type
           author {
             username
           }
@@ -20,17 +21,14 @@ const Seo = ({ path, title, description, image, type, date, lastmod, tags }) => 
     }
   `)
 
-  const { siteUrl, defaultTitle, defaultDescription, defaultImage, author } = site.siteMetadata
+  const { siteUrl, defaultTitle, defaultDescription, defaultImage, defaultType, author } = site.siteMetadata
 
   const seo = {
     url: `${siteUrl}${path || siteUrl}`,
     title: title || defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image || defaultImage}`,
-    type: type || 'website',
-    date: date || '',
-    lastmod: lastmod || '',
-    tags: tags || [],
+    type: type || defaultType
   }
 
   return (
@@ -46,33 +44,32 @@ const Seo = ({ path, title, description, image, type, date, lastmod, tags }) => 
       <meta name='publisher' content={`Dany Dodson, ${siteUrl}`} />
 
       <meta property='og:url' content={seo.url} />
+      <meta property='og:type' content={seo.type} />
       <meta property='og:title' content={seo.title} />
       <meta property='og:description' content={seo.description} />
-      <meta property='og:site_name' content='Dany Dodson' />
       <meta property='og:image' content={seo.image} />
-      <meta property='og:image:alt' content={seo.title} />
-      <meta property='og:type' content={seo.type} />
-      <meta property='fb:app_id' content='478714590211729' />
-      <meta property='fb:pages' content='{PAGE_ID}' />
+      <meta property='og:image:width' content='450' />
+      <meta property='og:image:height ' content='700' />
+      <meta property='og:site_name' content='Dany Dodson' />
 
-      <meta property='article:published_time' content={seo.date} />
-      <meta property='article:modified_time' content={seo.lastmod} />
-      <meta property='article:tag' content={[seo.tags]} />
+      {/* <meta property='fb:app_id' content='478714590211729' /> */}
+      {/* <meta property='fb:pages' content='{PAGE_ID}' /> */}
 
       <meta name='twitter:url' content={seo.url} />
       <meta name='twitter:title' content={seo.title} />
       <meta name='twitter:description' content={seo.description} />
       <meta name='twitter:image' content={seo.image} />
-      <meta name='twitter:image:alt' content={seo.title} />
-      <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:creator' content={`@${author.username}`} />
       <meta name='twitter:site' content={`@${author.username}`} />
+      <meta name='twitter:card' content='summary_large_image' />
 
       <meta name='format-detection' content='telephone=no' />
 
       <meta name='mobile-web-app-capable' content='yes' />
       <meta name='apple-mobile-web-app-capable' content='yes' />
       <meta name='apple-mobile-web-app-status-bar-style' content='default' />
+
+      <meta name='google-site-verification' content='HsxvbQJydXYPI-OHr4-e7NhnkgKLm9ikncLDKuSKTHs' />
 
     </Helmet>
   )

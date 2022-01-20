@@ -5,6 +5,7 @@ const config = {
   description: `💻 danydodson.dev | 🎨 danys.art | ♡ Dany Dodson`,
   image: `/cards/og@2x.png`,
   copyright: `© 2021 | Dany Dodson ♡`,
+  type: `website`,
 
   author: {
     name: `Dany Dodson`,
