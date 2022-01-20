@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { Pills } from '../components'
 
 const Posts = () => {
 
@@ -20,11 +20,6 @@ const Posts = () => {
               title
               date(formatString: "MMM D YYYY")
               description
-              cover {
-                childImageSharp {
-                  gatsbyImageData
-                }
-              }
               category
               tags
             }
@@ -37,21 +32,21 @@ const Posts = () => {
   const posts = data.posts.edges.filter(({ node }) => node)
 
   const postInner = (node) => {
-    const { body, frontmatter } = node
-    const { date } = frontmatter
+    const { frontmatter } = node
+    const { title, tags } = frontmatter
 
     return (
       <>
-        <time>{date}</time>
-        <MDXRenderer>{body}</MDXRenderer>
+        <h3>{title}</h3>
+        <Pills items={tags} />
       </>
     )
   }
 
   return (
     <section>
-      {posts && posts.map(({ node }, i) => (
-        <article key={i}>
+      {posts && posts.map(({ node }, item) => (
+        <article key={item}>
           {postInner(node)}
         </article>
       ))}

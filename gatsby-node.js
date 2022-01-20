@@ -50,7 +50,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               slug
             }
             frontmatter {
-              slug
               template
             }
           }

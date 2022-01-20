@@ -1,4 +1,9 @@
+const CATEGORY_COLORS = require('./colors')
+const CATEGORY_COLOR_EXTRA = require('./colors')
+
 module.exports = {
+  CATEGORY_COLORS,
+  CATEGORY_COLOR_EXTRA,
   getCategories: async graphql => {
     const {
       data: {
@@ -17,10 +22,12 @@ module.exports = {
       }
     `)
 
-    return group.map(cat => ({
-      ...cat
+    return group.map((cat, i) => ({
+      ...cat,
+      categoryColor: CATEGORY_COLORS[i] || CATEGORY_COLOR_EXTRA
+
     }))
 
-    // return group
   }
 }
+

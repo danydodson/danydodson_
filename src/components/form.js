@@ -3,8 +3,6 @@ import tw from 'twin.macro'
 import { Button } from '../components'
 import { useForm } from '../hooks'
 
-import 'twin.macro'
-
 const Form = () => {
 
   const sendMessage = () => {

@@ -16,12 +16,10 @@ const Layout = ({ children, location, ...rest }) => {
   })
 
   return (
-    <>
-      <div {...rest}>
-        <GlobalStyles />
-        {children}
-      </div>
-    </>
+    <div {...rest}>
+      <GlobalStyles />
+      {children}
+    </div>
   )
 }
 
