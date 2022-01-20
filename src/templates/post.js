@@ -18,7 +18,15 @@ const PostsTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <Seo title={`💻 Post: ${title} `} path={pathname} description={description} type='article' image={seoImage} published={published} lastmod={lastmod} />
+      <Seo
+        title={`💻 Post: ${title} `}
+        description={description}
+        path={pathname}
+        image={seoImage}
+        type='article'
+        published={published}
+        lastmod={lastmod}
+      />
 
       <section>
 

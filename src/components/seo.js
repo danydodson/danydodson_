@@ -28,9 +28,7 @@ const Seo = ({ path, title, description, image, type, published, lastmod }) => {
     title: title || defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image || defaultImage}`,
-    type: type || defaultType,
-    published: published || '',
-    lastmod: lastmod || ''
+    type: type || defaultType
   }
 
   return (
@@ -50,14 +48,15 @@ const Seo = ({ path, title, description, image, type, published, lastmod }) => {
       <meta property='og:description' content={seo.description} />
       <meta property='og:url' content={seo.url} />
       <meta property='og:site_name' content='Dany Dodson' />
-      <meta property='article:publisher' content='https://danydodson.dev' />
       <meta property='og:image' content={seo.image} />
       <meta property='og:image:width' content='450' />
       <meta property='og:image:height ' content='700' />
 
-      <meta name='article:author' content={author.username} />
-      <meta name='article:published_time' content={seo.published} />
-      <meta name='article:modified_time' content={seo.lastmod} />
+      <meta property='article:author' content={author.username} />
+      <meta property='article:publisher' content='https://danydodson.dev' />
+      
+      {published && (<meta property='article:published_time' content={published} />)}
+      {lastmod && (<meta property='article:modified_time' content={lastmod} />)}
 
       <meta property='fb:app_id' content='301953321955514' />
 
