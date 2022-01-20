@@ -52,7 +52,7 @@ const Seo = ({ path, title, description, image, type }) => {
       <meta property='og:image:height ' content='700' />
       <meta property='og:site_name' content='Dany Dodson' />
 
-      {/* <meta property='fb:app_id' content='478714590211729' /> */}
+      <meta property='fb:app_id' content='301953321955514' />
       {/* <meta property='fb:pages' content='{PAGE_ID}' /> */}
 
       <meta name='twitter:url' content={seo.url} />
