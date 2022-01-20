@@ -40,28 +40,33 @@ const Seo = ({ path, title, description, image, type }) => {
       <meta name='title' content={seo.title} />
       <meta name='description' content={seo.description} />
       <meta name='image' content={seo.image} />
-      <meta name='robots' content='index, follow' />
       <meta name='publisher' content={`Dany Dodson, ${siteUrl}`} />
 
-      <meta property='og:url' content={seo.url} />
+      <meta property='og:locale' content='en_US' />
       <meta property='og:type' content={seo.type} />
       <meta property='og:title' content={seo.title} />
       <meta property='og:description' content={seo.description} />
-      <meta property='og:image' content={seo.image} />
-      <meta property='og:image:width' content='450' />
-      <meta property='og:image:height ' content='700' />
+      <meta property='og:url' content={seo.url} />
       <meta property='og:site_name' content='Dany Dodson' />
+      <meta property='article:publisher' content='https://danydodson.dev' />
+      <meta property='og:image' content={seo.image} />
+      {/* <meta property='og:image:width' content='450' /> */}
+      {/* <meta property='og:image:height ' content='700' /> */}
+
+      {/* UTC seconds */}
+      {/* <meta name='article:published_time' content='1431556620' /> */}
+      {/* <meta name='article:modified_time' content='1431556620' /> */}
 
       <meta property='fb:app_id' content='301953321955514' />
-      {/* <meta property='fb:pages' content='{PAGE_ID}' /> */}
 
-      <meta name='twitter:url' content={seo.url} />
-      <meta name='twitter:title' content={seo.title} />
-      <meta name='twitter:description' content={seo.description} />
-      <meta name='twitter:image' content={seo.image} />
-      <meta name='twitter:creator' content={`@${author.username}`} />
-      <meta name='twitter:site' content={`@${author.username}`} />
       <meta name='twitter:card' content='summary_large_image' />
+      <meta name='twitter:description' content={seo.description} />
+      <meta name='twitter:title' content={seo.title} />
+      <meta name='twitter:site' content={`@${author.username}`} />
+      <meta name='twitter:domain' content={author.username} />
+      <meta name='twitter:image:src' content={seo.image} />
+      <meta name='twitter:creator' content={`@${author.username}`} />
+      <meta name='twitter:url' content={seo.url} />
 
       <meta name='format-detection' content='telephone=no' />
 

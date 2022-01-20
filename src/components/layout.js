@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { Seo } from '../components'
 import { GlobalStyles } from '../styles'
 
 const Layout = ({ children, location, ...rest }) => {
@@ -18,7 +17,6 @@ const Layout = ({ children, location, ...rest }) => {
 
   return (
     <>
-      <Seo />
       <div {...rest}>
         <GlobalStyles />
         {children}
