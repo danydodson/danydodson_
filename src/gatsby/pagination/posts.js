@@ -1,5 +1,5 @@
 const path = require('path')
-const siteConfig = require('../../config/site-config')
+const siteConfig = require('../../../site-config')
 
 const { getCategories } = require('../constants/categories.js')
 

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { ThemeProvider } from './src/styles'
+import RootLayout from './site-wrappers'
 
 export const wrapRootElement = ({ element }) => (
-  <ThemeProvider>{element}</ThemeProvider>
+  <RootLayout>{element}</RootLayout>
 )

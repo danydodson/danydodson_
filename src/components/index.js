@@ -1,4 +1,5 @@
 export { default as Button } from './button'
+export { default as Embed } from './embed'
 export { default as Form } from './form'
 export { default as Hero } from './hero'
 export { default as Layout } from './layout'

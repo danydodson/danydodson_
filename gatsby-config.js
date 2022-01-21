@@ -1,6 +1,6 @@
-require('dotenv').config()
+require('dotenv').config({ path: `.env` })
 
-const config = require('./src/config/site-config')
+const config = require('./site-config')
 
 module.exports = {
   siteMetadata: config,
@@ -36,6 +36,12 @@ module.exports = {
       options: {
         name: `projects`,
         path: `${__dirname}/src/content/projects`
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-transition-link',
+      options: {
+        layout: require.resolve(`./src/components/layout.js`)
       }
     },
     {

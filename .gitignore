@@ -3,5 +3,5 @@
 /.vscode
 /node_modules
 /public
-/.env
+/.env*
 /*.log

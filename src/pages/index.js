@@ -1,4 +1,5 @@
 import React from 'react'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import tw from 'twin.macro'
 
 import { Layout, Seo, Toggle, Hero, Posts } from './../components'
@@ -7,15 +8,23 @@ const IndexPage = ({ location }) => {
   const { pathname } = location
 
   return (
-    <Layout location={location}>
-      <Seo path={pathname} />
+    <React.StrictMode>
 
-      <main css={styles.container({ hasBackground: false })}>
-        <Toggle />
-        <Hero />
-        <Posts />
-      </main>
-    </Layout>
+      <Layout location={location}>
+        <Seo path={pathname} />
+
+        <main css={styles.container({ hasBackground: false })}>
+          <Toggle />
+          <Hero />
+
+          <AniLink paintDrip to='posts'>
+            Go to Posts
+          </AniLink>
+
+          <Posts />
+        </main>
+      </Layout>
+    </React.StrictMode>
   )
 }
 

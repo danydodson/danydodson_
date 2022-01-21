@@ -16,7 +16,7 @@ const Layout = ({ children, location, ...rest }) => {
   })
 
   return (
-    <div {...rest}>
+    <div id='root' {...rest}>
       <GlobalStyles />
       {children}
     </div>
