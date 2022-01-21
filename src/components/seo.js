@@ -40,7 +40,7 @@ const Seo = ({ path, title, description, image, type, published, lastmod }) => {
       <meta name='title' content={seo.title} />
       <meta name='description' content={seo.description} />
       <meta name='image' content={seo.image} />
-      <meta name='publisher' content={`Dany Dodson, ${siteUrl}`} />
+      <meta name='publisher' content={siteUrl} />
 
       <meta property='og:locale' content='en_US' />
       <meta property='og:type' content={seo.type} />
@@ -52,8 +52,8 @@ const Seo = ({ path, title, description, image, type, published, lastmod }) => {
       <meta property='og:image:width' content='450' />
       <meta property='og:image:height ' content='700' />
 
-      <meta property='article:author' content={`Dany Dodson`} />
-      <meta property='article:publisher' content='https://danydodson.dev/' />
+      <meta property='article:author' content={author.username} />
+      <meta property='article:publisher' content={siteUrl} />
 
       {published && (<meta property='article:published_time' content={published} />)}
       {lastmod && (<meta property='article:modified_time' content={lastmod} />)}
