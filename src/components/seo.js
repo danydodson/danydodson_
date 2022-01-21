@@ -54,7 +54,7 @@ const Seo = ({ path, title, description, image, type, published, lastmod }) => {
 
       <meta property='article:author' content={author.username} />
       <meta property='article:publisher' content='https://danydodson.dev' />
-      
+
       {published && (<meta property='article:published_time' content={published} />)}
       {lastmod && (<meta property='article:modified_time' content={lastmod} />)}
 
@@ -76,6 +76,8 @@ const Seo = ({ path, title, description, image, type, published, lastmod }) => {
       <meta name='apple-mobile-web-app-status-bar-style' content='default' />
 
       <meta name='google-site-verification' content='HsxvbQJydXYPI-OHr4-e7NhnkgKLm9ikncLDKuSKTHs' />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-191503619-1"></script>
 
     </Helmet>
   )

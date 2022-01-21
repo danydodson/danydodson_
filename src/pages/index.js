@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import tw from 'twin.macro'
 
-import { Layout, Seo, Toggle, Hero, Posts } from './../components'
+import { Layout, Seo, Toggle, Hero } from './../components'
 
 const IndexPage = ({ location }) => {
   const { pathname } = location
@@ -17,7 +17,7 @@ const IndexPage = ({ location }) => {
 
         <Link to='posts'>Go to Posts</Link>
 
-        <Posts />
+        {/* <Posts /> */}
 
       </main>
     </Layout>

@@ -16,10 +16,7 @@ export default function useSiteMetadata() {
             author {
               name
               username
-              email
               image
-              bio
-              
             }
           }
         }

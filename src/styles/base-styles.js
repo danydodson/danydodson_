@@ -22,6 +22,12 @@ const baseStyles = css`
     ${tw`bg-primary text-primary antialiased transition-all duration-200`};  
     --webkit-tap-highlight-colorolor: ${theme`colors.purple.500`};
   }
+
+  #___graphql,
+  #gatsby-focus-wrapper {
+    width: 100%;
+    height: 100%;
+  }
 `
 
 export default baseStyles

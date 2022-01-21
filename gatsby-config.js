@@ -2,9 +2,10 @@ require('dotenv').config({ path: `.env` })
 
 const config = require('./src/config')
 
+const siteUrl = process.env.URL || config.siteUrl
+
 module.exports = {
   siteMetadata: config,
-
   plugins: [
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
@@ -88,7 +89,6 @@ module.exports = {
       }
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -98,9 +98,112 @@ module.exports = {
         name: `Dany Dodson`,
         theme_color: `#0f172a`,
         background_color: `#0f172a`,
-        icon: `logos/logo@1x.png`,
+        icon: `src/assets/logos/logo@1x.png`,
         display: `minimal-ui`
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `#graphql
+        {
+          allSitePage {
+            nodes {
+              path
+            }
+          },
+          allMdx {
+            nodes {
+              frontmatter {
+                lastmod
+              }
+            }
+          }
+        }
+      `,
+        resolveSiteUrl: () => siteUrl,
+        resolvePages: ({ allSitePage: { nodes: allPages } }) => {
+          return allPages.map(page => {
+            return { ...page }
+          })
+        },
+        serialize: ({ path, modifiedGmt }) => {
+          return {
+            url: path,
+            lastmod: modifiedGmt
+          }
+        }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `#graphql
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ 'content:encoded': edge.node.body }]
+                })
+              })
+            },
+            query: `#graphql
+              {
+                allMdx(
+                  limit: 1000,
+                  filter: { frontmatter: { template: { eq: "post" } } },
+                  sort: { order: DESC, fields: [frontmatter___lastmod] }
+                ) {
+                  edges {
+                    node {
+                      body
+                      excerpt
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        title
+                        slug
+                        date
+                        description
+                        cover {
+                          childImageSharp {
+                            gatsbyImageData
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/rss.xml',
+            title: 'Dany Dodson\'s Feed',
+            match: "^/post/"
+          }
+        ]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_ID
+      }
+    },
   ]
 }
