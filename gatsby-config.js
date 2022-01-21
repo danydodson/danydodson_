@@ -13,8 +13,22 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `static`,
-        path: `${__dirname}/static`
+        name: `cards`,
+        path: `${__dirname}/src/assets/cards`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `docs`,
+        path: `${__dirname}/src/assets/docs`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `logos`,
+        path: `${__dirname}/src/assets/logos`
       }
     },
     {
@@ -84,7 +98,7 @@ module.exports = {
         name: `Dany Dodson`,
         theme_color: `#0f172a`,
         background_color: `#0f172a`,
-        icon: `static/logos/logo@1x.png`,
+        icon: `logos/logo@1x.png`,
         display: `minimal-ui`
       }
     }

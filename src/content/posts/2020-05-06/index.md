@@ -18,12 +18,12 @@ import { Collapsable } from '../../../components/mdx'
 
 # Reverse interview
 
-<Collapsable>
+<Collapsable type='' title='warning'>
 
 Account Surfer became "3rd in Best Business or Consumer Value" at Microsoft 365 app award
-
-</Collapsable>
 
 Account Surfer became "3rd in Best Business or Consumer Value" at Microsoft 365 app award
 
 Consectetur aute duis ut ipsum commodo adipisicing duis laborum voluptate. Labore exercitation enim enim consequat sint sit elit nostrud velit nostrud. Aliquip minim consectetur officia et. Consectetur exercitation qui velit consequat ut veniam enim eiusmod incididunt cillum ex sit. Ex sint voluptate labore id ullamco.
+
+</Collapsable>

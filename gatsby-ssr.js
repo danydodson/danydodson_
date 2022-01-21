@@ -1,12 +1,14 @@
 import React from 'react'
 
-import { ThemeProvider } from './src/styles'
+import { ThemeProvider, GlobalStyles } from './src/styles'
 import { MDXProvider } from '@mdx-js/react'
 import { Embed } from './src/components'
+import { Collapsable } from './src/components/mdx'
 
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider>
-    <MDXProvider components={{ Embed }}>
+    <GlobalStyles />
+    <MDXProvider components={{ Embed, Collapsable }}>
       {element}
     </MDXProvider>
   </ThemeProvider>

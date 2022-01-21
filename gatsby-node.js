@@ -6,7 +6,7 @@ const paginatePosts = require('./src/helpers/paginate-posts.js')
 const paginateCategories = require('./src/helpers/paginate-categories.js')
 const paginateTags = require('./src/helpers/paginate-tags.js')
 
-const getCategories = require('./src/helpers/get-categories')
+const { getCategories } = require('./src/helpers/get-categories')
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions

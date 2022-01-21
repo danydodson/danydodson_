@@ -1,7 +1,7 @@
 const path = require('path')
 const siteConfig = require('../config')
 
-const getCategories = require('./get-categories')
+const { getCategories } = require('./get-categories')
 
 module.exports = async (graphql, actions) => {
   const { createPage } = actions

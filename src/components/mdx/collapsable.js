@@ -14,7 +14,13 @@ const Collapsable = ({ children, title, titleSize = '1.25rem', defaultShow = fal
               {title}
             </Button>
           </StyledCollapsableTitleWrap>
-          : null
+          : (
+            <StyledCollapsableTitleWrap titleSize={titleSize}>
+              <Button onClick={() => setShow(!show)}>
+                {title}
+              </Button>
+            </StyledCollapsableTitleWrap>
+          )
       }
       {
         show &&
