@@ -32,7 +32,7 @@ const Seo = ({ path, title, description, image, type, published, lastmod }) => {
   }
 
   return (
-    <Helmet title={title} defaultTitle={seo.title}>
+    <Helmet htmlAttributes={{ prefix: 'og: http://ogp.me/ns#' }} title={title} defaultTitle={seo.title}>
       <html lang='en' />
 
       <link rel='canonical' href={seo.url} />
@@ -53,7 +53,7 @@ const Seo = ({ path, title, description, image, type, published, lastmod }) => {
       <meta property='og:image:height ' content='700' />
 
       <meta property='article:author' content={author.username} />
-      <meta property='article:publisher' content='https://danydodson.dev' />
+      <meta property='article:publisher' content='https://danydodson.dev/' />
 
       {published && (<meta property='article:published_time' content={published} />)}
       {lastmod && (<meta property='article:modified_time' content={lastmod} />)}

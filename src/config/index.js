@@ -3,7 +3,7 @@ const config = {
   siteUrl: `https://danydodson.dev`,
   title: `🖐 Web & Software Engineer. Currently working remotely from the mid west.`,
   description: `💻 danydodson.dev | 🎨 danys.art | ♡ Dany Dodson`,
-  image: `cards/og@2x.png`,
+  image: `/cards/og@2x.png`,
   copyright: `© 2021 | Dany Dodson ♡`,
   type: `website`,
 
@@ -11,7 +11,7 @@ const config = {
     name: `Dany Dodson`,
     username: `danydodson`,
     email: `danydodson@gmail.com`,
-    image: `cards/og@1x.png`,
+    image: `/cards/og@1x.png`,
     bio: `Award-winning writer. Subtly charming travel advocate. Web practitioner.`,
     map: `Evansville, IN`,
   },
