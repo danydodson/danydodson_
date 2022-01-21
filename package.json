@@ -9,7 +9,7 @@
     "start": "yarn run develop",
     "develop": "gatsby develop -H 0.0.0.0 -p 8000",
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve", 
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "clean": "gatsby clean"
   },
