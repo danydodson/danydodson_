@@ -1,6 +1,6 @@
 import tw, { css, theme } from 'twin.macro'
 
-const baseStyles = css`
+const themeStyles = css`
 
   .light {
     --bg-primary: #ffffff;
@@ -23,11 +23,11 @@ const baseStyles = css`
     --webkit-tap-highlight-colorolor: ${theme`colors.purple.500`};
   }
 
-  #___graphql,
+  #___gatsby,
   #gatsby-focus-wrapper {
     width: 100%;
     height: 100%;
   }
 `
 
-export default baseStyles
+export default themeStyles

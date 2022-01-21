@@ -20,6 +20,7 @@ const IndexPage = ({ location }) => {
         {/* <Posts /> */}
 
       </main>
+
     </Layout>
   )
 }

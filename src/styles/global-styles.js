@@ -1,12 +1,12 @@
 import React from 'react'
 import { Global } from '@emotion/react'
 import { GlobalStyles as BaseStyles } from 'twin.macro'
-import { baseStyles } from '.'
+import { themeStyles } from '.'
 
 const GlobalStyles = () => (
   <>
     <BaseStyles />
-    <Global styles={baseStyles} />
+    <Global styles={themeStyles} />
   </>
 )
 
