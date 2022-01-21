@@ -1,7 +1,0 @@
-/.cache
-/.netlify
-/.vscode
-/node_modules
-/public
-/.env*
-/*.log

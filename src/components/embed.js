@@ -11,6 +11,7 @@ function Embed({ aspectRatio, src, caption }) {
       return
     }
 
+    
     let doc = iframe.document
     if (iframe.contentDocument) doc = iframe.contentDocument
     else if (iframe.contentWindow) doc = iframe.contentWindow.document

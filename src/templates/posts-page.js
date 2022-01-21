@@ -17,6 +17,9 @@ const PostTemplate = ({ data, pageContext, location }) => {
       <Seo title={`💻 Posts List `} path={pathname} description={pageTitle} />
 
       <section>
+        <Link to='/'>
+          Go to Home
+        </Link>
 
         {currentPage > 0 ? <h2>Posts Archive: Page - {currentPage}</h2> : <h3>Posts Archive </h3>}
 

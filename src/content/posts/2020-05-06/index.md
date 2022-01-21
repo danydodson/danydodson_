@@ -9,12 +9,20 @@ draft: false
 cover: cover.webp
 description: List of the questions from dev to the company.
 category: Programming
-tags: 
+tags:
   - interview
 featured: false
 ---
 
+import { Collapsable } from '../../../components/mdx'
+
 # Reverse interview
+
+<Collapsable>
+
+Account Surfer became "3rd in Best Business or Consumer Value" at Microsoft 365 app award
+
+</Collapsable>
 
 Account Surfer became "3rd in Best Business or Consumer Value" at Microsoft 365 app award
 

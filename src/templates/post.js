@@ -31,6 +31,9 @@ const PostsTemplate = ({ data, location }) => {
       <section>
 
         <article>
+          <Link to='/'>
+            Go to Home
+          </Link>
           <h2>{title}</h2>
           <br />
 

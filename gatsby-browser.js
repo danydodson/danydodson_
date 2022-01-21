@@ -1,7 +1,13 @@
 import React from 'react'
 
-import RootLayout from './site-wrappers'
+import { ThemeProvider } from './src/styles'
+import { MDXProvider } from '@mdx-js/react'
+import { Embed } from './src/components'
 
 export const wrapRootElement = ({ element }) => (
-  <RootLayout>{element}</RootLayout>
+  <ThemeProvider>
+    <MDXProvider components={{ Embed }}>
+      {element}
+    </MDXProvider>
+  </ThemeProvider>
 )

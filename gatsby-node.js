@@ -2,11 +2,11 @@ const { createFilePath } = require('gatsby-source-filesystem')
 
 const path = require('path')
 
-const postsPagination = require('./src/gatsby/pagination/posts.js')
-const categoriesPagination = require('./src/gatsby/pagination/categories.js')
-const tagsPagination = require('./src/gatsby/pagination/tags.js')
+const paginatePosts = require('./src/helpers/paginate-posts.js')
+const paginateCategories = require('./src/helpers/paginate-categories.js')
+const paginateTags = require('./src/helpers/paginate-tags.js')
 
-const { getCategories } = require('./src/gatsby/constants/categories')
+const getCategories = require('./src/helpers/get-categories')
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -62,7 +62,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild(result.errors)
     return
   }
-  
+
   // reporter.success(JSON.stringify(result, null, 2))
 
   const { edges } = result.data.allMdx
@@ -110,9 +110,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return null
   })
 
-  await postsPagination(graphql, actions)
-  await categoriesPagination(graphql, actions)
-  await tagsPagination(graphql, actions)
+  await paginatePosts(graphql, actions)
+  await paginateCategories(graphql, actions)
+  await paginateTags(graphql, actions)
 
 }
 

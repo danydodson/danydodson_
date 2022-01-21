@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import { Layout, Seo } from '../components'
 
@@ -10,6 +11,9 @@ const IndexPage = ({ location }) => {
       <Seo path={pathname} />
 
       <section>
+        <Link to='/'>
+          Go to Home
+        </Link>
         <h1>
           Thanks!{' '}
           <span role='img' aria-label='Heart Raised-hands'>
