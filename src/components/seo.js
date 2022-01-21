@@ -52,7 +52,7 @@ const Seo = ({ path, title, description, image, type, published, lastmod }) => {
       <meta property='og:image:width' content='450' />
       <meta property='og:image:height ' content='700' />
 
-      <meta property='article:author' content={author.username} />
+      <meta property='article:author' content={`Dany Dodson`} />
       <meta property='article:publisher' content='https://danydodson.dev/' />
 
       {published && (<meta property='article:published_time' content={published} />)}
