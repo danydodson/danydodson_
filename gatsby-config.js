@@ -90,17 +90,19 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
+        id: `/`,
+        start_url: `/`,
         name: config.author.name,
         short_name: config.author.username,
         description: config.title,
         orientation: `portrait-primary`,
-        background_color: `#0f172a`,
+        display: `standalone`,
         theme_color: `#0f172a`,
-        theme_color_in_head: false,
-        id: `https://danydodson.dev/`,
-        start_url: `https://danydodson.dev/`,
+        background_color: `#0f172a`,
         icon: `src/assets/icons/icon-x512.png`,
-        display: `minimal-ui`
+        icon_options: {
+          purpose: `maskable`
+        }
       }
     },
     {
