@@ -18,7 +18,13 @@ const ViewProjectTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <Seo title={`💻 Project: ${title} `} path={pathname} description={description} type='article' image={seoImage} />
+      <Seo
+        path={pathname}
+        title={`💻 Project: ${title} `}
+        description={description}
+        image={seoImage}
+        date={date}
+      />
 
       <section>
         <article>
@@ -62,7 +68,6 @@ export const ProjectQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMM D YYYY")
-        lastmod(formatString: "X")
         description
         github
         external

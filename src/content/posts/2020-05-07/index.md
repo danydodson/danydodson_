@@ -16,6 +16,8 @@ import { Collapsable } from '../../../components'
 
 # New One
 
+Contact hashtag click <a href='https://twitter.com/hashtag/danydodson?src=hashtag_click' rel='noopener noreferrer' target='_blank' role='link'>@danydodson</a>
+
 <Collapsable type='' title='warning'>
 
 Account Surfer became "3rd in Best Business or Consumer Value" at Microsoft 365 app award

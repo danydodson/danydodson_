@@ -18,7 +18,12 @@ const ViewJobTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <Seo title={`💻 Job: ${title} `} path={pathname} description={description} type='article' image={seoImage} />
+      <Seo
+        path={pathname}
+        title={`💻 Job: ${title} `}
+        description={description}
+        image={seoImage}
+      />
 
       <section>
         <article>

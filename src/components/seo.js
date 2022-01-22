@@ -1,84 +1,60 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
+import { useSiteMetadata } from '../hooks'
 
-const Seo = ({ path, title, description, image, type, published, lastmod }) => {
+const Seo = props => {
 
-  const { site } = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          siteUrl
-          defaultTitle: title
-          defaultDescription: description
-          defaultImage: image
-          defaultType: type
-          author {
-            username
-          }
-        }
-      }
-    }
-  `)
+  const { isBlog, lang = 'en', image } = props
 
-  const { siteUrl, defaultTitle, defaultDescription, defaultImage, defaultType, author } = site.siteMetadata
+  const { siteUrl, title, about, username, author, cover } = useSiteMetadata()
 
   const seo = {
-    url: `${siteUrl}${path || siteUrl}`,
-    title: title || defaultTitle,
-    description: description || defaultDescription,
-    image: `${siteUrl}${image || defaultImage}`,
-    type: type || defaultType
+    title: props.title || title,
+    url: new URL(props.path, siteUrl) || siteUrl,
+    description: props.description || about,
+    image: image ? new URL(image, siteUrl) : new URL(cover, siteUrl)
   }
 
   return (
-    <Helmet htmlAttributes={{ prefix: 'og: http://ogp.me/ns#' }} title={title} defaultTitle={seo.title}>
-      <html lang='en' />
-
+    <Helmet title={seo.title}>
+      <html lang={lang} prefix='og: http://ogp.me/ns#' />
       <link rel='canonical' href={seo.url} />
-
       <meta name='title' content={seo.title} />
       <meta name='description' content={seo.description} />
       <meta name='image' content={seo.image} />
       <meta name='publisher' content={siteUrl} />
 
-      <meta property='og:locale' content='en_US' />
-      <meta property='og:type' content={seo.type} />
       <meta property='og:title' content={seo.title} />
       <meta property='og:description' content={seo.description} />
+      <meta property='og:type' content={isBlog ? 'article' : 'website'} />
       <meta property='og:url' content={seo.url} />
-      <meta property='og:site_name' content='Dany Dodson' />
+      <meta property='og:site_name' content={author} />
       <meta property='og:image' content={seo.image} />
-      <meta property='og:image:width' content='450' />
-      <meta property='og:image:height ' content='700' />
 
-      <meta property='article:author' content={author.username} />
-      <meta property='article:publisher' content={siteUrl} />
+      {isBlog && <meta property='article:author' content={author} />}
+      {isBlog && <meta property='article:publisher' content={siteUrl} />}
+      {isBlog && <meta property='article:published_time' content={props.date} />}
 
-      {published && (<meta property='article:published_time' content={published} />)}
-      {lastmod && (<meta property='article:modified_time' content={lastmod} />)}
-
-      <meta property='fb:app_id' content='301953321955514' />
-
-      <meta name='twitter:card' content='summary_large_image' />
-      <meta name='twitter:description' content={seo.description} />
       <meta name='twitter:title' content={seo.title} />
-      <meta name='twitter:site' content={`@${author.username}`} />
-      <meta name='twitter:domain' content={author.username} />
-      <meta name='twitter:image:src' content={seo.image} />
-      <meta name='twitter:creator' content={`@${author.username}`} />
+      <meta name='twitter:description' content={seo.description} />
+      <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:url' content={seo.url} />
+      <meta name='twitter:site' content={`@${username}`} />
+      <meta name='twitter:image' content={seo.image} />
+      <meta name='twitter:creator' content={`@${username}`} />
+      <meta name='twitter:domain' content={username} />
 
-      <meta name='format-detection' content='telephone=no' />
 
       <meta name='mobile-web-app-capable' content='yes' />
       <meta name='apple-mobile-web-app-capable' content='yes' />
       <meta name='apple-mobile-web-app-status-bar-style' content='default' />
+      <meta name='format-detection' content='telephone=no' />
+
+      <meta property='fb:app_id' content='301953321955514' />
 
       <meta name='google-site-verification' content='HsxvbQJydXYPI-OHr4-e7NhnkgKLm9ikncLDKuSKTHs' />
 
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-191503619-1"></script>
-
     </Helmet>
   )
 }

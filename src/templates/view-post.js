@@ -2,14 +2,14 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { css } from 'twin.macro'
 import { Layout, Seo } from '../components'
+import { css } from 'twin.macro'
 
 // site.com/post/<post>
 
 const ViewPostTemplate = ({ data, location }) => {
   const { body, frontmatter } = data.mdx
-  const { title, date, lastmod, description, cover, category, tags } = frontmatter
+  const { title, date, description, cover, category, tags } = frontmatter
 
   const { pathname } = location
 
@@ -19,13 +19,12 @@ const ViewPostTemplate = ({ data, location }) => {
   return (
     <Layout location={location}>
       <Seo
+        path={pathname}
         title={`💻 Post: ${title} `}
         description={description}
-        path={pathname}
         image={seoImage}
-        type='article'
-        published={date}
-        lastmod={lastmod}
+        date={date}
+        isBlog
       />
 
       <section>
@@ -39,6 +38,8 @@ const ViewPostTemplate = ({ data, location }) => {
 
           <time>{date}</time>
           <br />
+
+          {/* <ShareButtons url={config.siteUrl + pathname} title={title} quote={title} tags={tags} /> */}
 
           <GatsbyImage
             image={image}
@@ -82,7 +83,6 @@ export const PostQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMM D YYYY")
-        lastmod(formatString: "X")
         description
         category
         tags
