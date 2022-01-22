@@ -99,10 +99,7 @@ module.exports = {
         display: `standalone`,
         theme_color: `#0f172a`,
         background_color: `#0f172a`,
-        icon: `src/assets/icons/icon-x512.png`,
-        icon_options: {
-          purpose: `maskable`
-        }
+        icon: `src/assets/icons/icon-x512.png`
       }
     },
     {
