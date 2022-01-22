@@ -96,7 +96,7 @@ module.exports = {
         short_name: config.author.username,
         description: config.title,
         orientation: `portrait-primary`,
-        display: `standalone`,
+        display: `minimal-ui`,
         theme_color: `#0f172a`,
         background_color: `#0f172a`,
         icon: `src/assets/icons/icon-x512.png`
