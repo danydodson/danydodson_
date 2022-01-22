@@ -18,7 +18,7 @@ module.exports = {
         md: '1.25rem'
       },
 
-      paddingTop: {
+      padding: {
         md: '-1.25rem'
       },
     }
