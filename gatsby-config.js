@@ -93,15 +93,14 @@ module.exports = {
         name: config.author.name,
         short_name: config.author.username,
         description: config.title,
-        lang: `en`,
-        display: `minimal-ui`,
         orientation: `portrait-primary`,
         background_color: `#0f172a`,
         theme_color: `#0f172a`,
         theme_color_in_head: false,
         id: `https://danydodson.dev/`,
         start_url: `https://danydodson.dev/`,
-        icon: `src/assets/icons/icon-x512.png`
+        icon: `src/assets/icons/icon-x512.png`,
+        display: `minimal-ui`
       }
     },
     {
