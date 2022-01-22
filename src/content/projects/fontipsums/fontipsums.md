@@ -1,17 +1,15 @@
 ---
 template: project
-date: 2016-01-01T00:00:00.000Z
-lastmod: 2016-01-01T00:00:00.000Z
 title: Fontipsums
 slug: /projects/fontipsums
-draft: false
+date: 2016-01-01T00:00:00.000
+lastmod: 2016-01-01T00:00:00.000
+description: Fontipsums project description
 cover: cover.webp
-description: null
+draft: false
 github: https://github.com/bchiang7/fontipsums/
 external: http://bchiang7.github.io/fontipsums/
-tech:
-  - HTML
-  - SCSS
+tags: [Html, Sass]
 featured: false
 ---
 

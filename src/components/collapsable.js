@@ -1,25 +1,26 @@
 import React, { useState } from 'react'
-import { styled } from 'twin.macro'
-import Button from '../button'
+import tw from 'twin.macro'
+import Button from './button'
 
 const Collapsable = ({ children, title, titleSize = '1.25rem', defaultShow = false }) => {
+
   const [show, setShow] = useState(defaultShow)
 
   return (
-    <div className='collapsable'>
+    <div>
       {
         title ?
-          <StyledCollapsableTitleWrap titleSize={titleSize}>
+          <Title titleSize={titleSize}>
             <Button onClick={() => setShow(!show)}>
               {title}
             </Button>
-          </StyledCollapsableTitleWrap>
+          </Title>
           : (
-            <StyledCollapsableTitleWrap titleSize={titleSize}>
+            <Title titleSize={titleSize}>
               <Button onClick={() => setShow(!show)}>
                 {title}
               </Button>
-            </StyledCollapsableTitleWrap>
+            </Title>
           )
       }
       {
@@ -30,17 +31,10 @@ const Collapsable = ({ children, title, titleSize = '1.25rem', defaultShow = fal
       }
     </div>
   )
+
+
 }
 
-
-const StyledCollapsableTitleWrap = styled.div`
-  display: flex;
-  align-items: center;
-  font-size: ${(props) => props.titleSize};
-  margin: 1rem 0;
-  button {
-    color: black;
-  }
-`
+const Title = tw.div`flex items-center text-2xl my-4`
 
 export default Collapsable

@@ -9,8 +9,10 @@ module.exports = {
   plugins: [
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-graphql-config`,
-    `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-remark-images`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -28,8 +30,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `logos`,
-        path: `${__dirname}/src/assets/logos`
+        name: `icons`,
+        path: `${__dirname}/src/assets/icons`
       }
     },
     {
@@ -63,10 +65,6 @@ module.exports = {
         prefix: `assets/`
       }
     },
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-    `gatsby-remark-images`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -88,18 +86,22 @@ module.exports = {
         ]
       }
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-robots-txt`,
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        start_url: `/`,
-        short_name: `danydodson`,
-        name: `Dany Dodson`,
-        theme_color: `#0f172a`,
+        name: config.author.name,
+        short_name: config.author.username,
+        description: config.title,
+        lang: `en`,
+        display: `minimal-ui`,
+        orientation: `portrait-primary`,
         background_color: `#0f172a`,
-        icon: `src/assets/logos/logo@1x.png`,
-        display: `minimal-ui`
+        theme_color: `#0f172a`,
+        theme_color_in_head: false,
+        id: `https://danydodson.dev/`,
+        start_url: `https://danydodson.dev/`,
+        icon: `src/assets/icons/icon-x512.png`
       }
     },
     {
@@ -199,6 +201,10 @@ module.exports = {
         ]
       }
     },
+    `gatsby-plugin-graphql-config`,
+    `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

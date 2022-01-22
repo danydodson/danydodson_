@@ -2,14 +2,15 @@
 template: job
 title: UI Engineer Co-op
 slug: /jobs/ui-engineer-op-at-apple
-date: 2019-08-05T00:00:00.000Z
-draft: false
-cover: cover.webp
+date: 2019-08-05T00:00:00.000
+lastmod: 2019-08-05T00:00:00.000
 company: Apple
 description: Developed and shipped highly interactive web applications for Apple Music using Ember.js
-map: Cupertino, CA
 range: July - December 2017
+cover: cover.webp
+map: Cupertino, CA
 url: https://www.apple.com/music/
+draft: false
 ---
 
 # UI Engineer Co-op

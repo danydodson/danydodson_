@@ -2,13 +2,13 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { Layout, Seo } from '../components'
 
-// site.com/categories
+// site.com/tags
 
-const CategoriesTemplate = ({ data, location }) => {
-  const categories = data.allMdx.group
+const ListTagsTemplate = ({ data, location }) => {
+  const tags = data.allMdx.group
   const { pathname } = location
 
-  const description = 'Site Categories'
+  const description = 'Tags List'
 
   return (
     <Layout location={location}>
@@ -16,13 +16,13 @@ const CategoriesTemplate = ({ data, location }) => {
 
       <section>
 
-        <h2>All Catagories</h2>
+        <h2>All Tags</h2>
 
         <ul>
-          {categories.map(category => (
-            <li key={category.fieldValue}>
-              <Link to={`/category/${category.fieldValue}/`}>
-                {category.fieldValue} ({category.totalCount})
+          {tags.map(tag => (
+            <li key={tag.fieldValue}>
+              <Link to={`/tag/${tag.fieldValue}`}>
+                {tag.fieldValue} ({tag.totalCount})
               </Link>
             </li>
           ))}
@@ -33,12 +33,12 @@ const CategoriesTemplate = ({ data, location }) => {
   )
 }
 
-export const CategoriesQuery = graphql`
+export const TagsQuery = graphql`
   query {
     allMdx(
       filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
     ) {
-      group(field: frontmatter___category) {
+      group(field: frontmatter___tags) {
         fieldValue
         totalCount
       }
@@ -46,5 +46,4 @@ export const CategoriesQuery = graphql`
   }
 `
 
-export default CategoriesTemplate
-
+export default ListTagsTemplate

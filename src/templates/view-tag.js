@@ -2,10 +2,10 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { Layout, Seo } from '../components'
 
-// site.com/tag/<tag>
+// site.com/tag/<tag>/page/<page#>
 
-const TagTemplate = ({ data, pageContext, location }) => {
-  const { tag, categories, currentPage } = pageContext
+const ViewTagTemplate = ({ data, pageContext, location }) => {
+  const { tag, currentPage } = pageContext
   const { edges } = data.allMdx
 
   const { pathname } = location
@@ -36,13 +36,13 @@ const TagTemplate = ({ data, pageContext, location }) => {
 
         <h2>all categories:</h2>
 
-        <ul>
+        {/* <ul>
           {categories.map((category, i) => (
             <li key={i}>
               <Link to={`/category/${category.fieldValue}`}>{category.fieldValue}</Link>
             </li>
           ))}
-        </ul>
+        </ul> */}
 
       </section>
     </Layout>
@@ -66,16 +66,15 @@ export const TagQuery = graphql`
           }
           frontmatter {
             title
-            slug
             date(formatString: "MMM D YYYY")
             description
             category
             tags
-            # cover {
-            #   childImageSharp {
-            #     gatsbyImageData(width: 700)
-            #   }
-            # }
+            cover {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
           }
         }
       }
@@ -83,5 +82,5 @@ export const TagQuery = graphql`
   }
 `
 
-export default TagTemplate
+export default ViewTagTemplate
 

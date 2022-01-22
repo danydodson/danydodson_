@@ -7,12 +7,11 @@ export default function useSiteMetadata() {
       query SiteMetadataQuery {
         site {
           siteMetadata {
-            siteUrl
+            type
             image
             title
             description
-            copyright
-            type
+            siteUrl
             author {
               name
               username

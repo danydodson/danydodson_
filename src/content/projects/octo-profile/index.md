@@ -1,18 +1,15 @@
 ---
 template: project
-date: 2018-01-01T00:00:00.000Z
-lastmod: 2018-01-01T00:00:00.000Z
 title: OctoProfile
 slug: /projects/octoprofile
-draft: false
+date: 2018-01-01T00:00:00.000
+lastmod: 2018-01-01T00:00:00.000
+description: OctoProfile project description
 cover: cover.png
-description: null
+draft: false
 github: https://github.com/bchiang7/octoprofile
 external: https://octoprofile.now.sh
-tech:
-  - Next.js
-  - Chart.js
-  - GitHub API
+tech: [Next.js Chart.js Github]
 featured: false
 ---
 

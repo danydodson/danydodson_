@@ -5,11 +5,11 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { css } from 'twin.macro'
 import { Layout, Seo } from '../components'
 
-// site.com/posts
+// site.com/post/<post>
 
-const PostsTemplate = ({ data, location }) => {
+const ViewPostTemplate = ({ data, location }) => {
   const { body, frontmatter } = data.mdx
-  const { title, date, published, lastmod, description, cover, category, tags } = frontmatter
+  const { title, date, lastmod, description, cover, category, tags } = frontmatter
 
   const { pathname } = location
 
@@ -24,7 +24,7 @@ const PostsTemplate = ({ data, location }) => {
         path={pathname}
         image={seoImage}
         type='article'
-        published={published}
+        published={date}
         lastmod={lastmod}
       />
 
@@ -70,7 +70,7 @@ const PostsTemplate = ({ data, location }) => {
   )
 }
 
-export const PostBySlugQuery = graphql`
+export const PostQuery = graphql`
   query ($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       body
@@ -82,20 +82,19 @@ export const PostBySlugQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMM D YYYY")
-        published(formatString: "X")
         lastmod(formatString: "X")
         description
+        category
+        tags
         cover {
           childImageSharp {
             gatsbyImageData
           }
         }
-        category
-        tags
       }
     }
   }
 `
 
-export default PostsTemplate
+export default ViewPostTemplate
 

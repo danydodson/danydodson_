@@ -1,3 +1,3 @@
-export { default as themeStyles } from './theme-styles'
-export { default as GlobalStyles } from './global-styles'
+export { default as themeBase } from './theme-base'
+export { default as ThemeLayout } from './theme-layout'
 export { ThemeContext, ThemeProvider } from './theme-context'

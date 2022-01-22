@@ -1,15 +1,15 @@
 ---
 template: project
-date: 2018-12-18T00:00:00.000Z
-lastmod: 2018-12-18T00:00:00.000Z
 title: Spotify Profile
 slug: /projects/spotify-profile
-draft: false
+date: 2018-12-18T00:00:00.000
+lastmod: 2018-12-18T00:00:00.000
+description: Spotify Profile project description
 cover: cover.png
-description:
+draft: false
 github: https://github.com/danydodson
 external: https://spotify-profile.herokuapp.com/
-tech: [React, Express, Styled Components]
+tags: [React, Express, Styled Components]
 featured: true
 ---
 

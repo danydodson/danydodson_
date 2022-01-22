@@ -3,16 +3,12 @@ template: post
 title: Chrome custom JS and CSS extension
 slug: /posts/chrome-custom-js-and-css-extension
 date: 2020-04-18T00:00:00
-published: 2020-04-18T00:00:00
 lastmod: 2020-04-18T00:00:00
-draft: false
-cover: cover.webp
 description: Chrome custom JS and CSS extension
+cover: cover.webp
+draft: false
 category: Productivity
-tags: 
-  - chrome
-  - javascript
-  - utilities
+tags: [chrome, javascript, utilities]
 featured: false
 ---
 

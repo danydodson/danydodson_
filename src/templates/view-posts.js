@@ -2,10 +2,10 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { Layout, Seo } from '../components'
 
-// site.com/posts/<post>
+// site.com/posts
 
-const PostTemplate = ({ data, pageContext, location }) => {
-  const { categories, currentPage } = pageContext
+const ViewPostsTemplate = ({ data, pageContext, location }) => {
+  const { currentPage } = pageContext
   const { edges } = data.allMdx
 
   const { pathname } = location
@@ -35,24 +35,12 @@ const PostTemplate = ({ data, pageContext, location }) => {
           ))}
         </ul>
 
-        <br />
-
-        <h2>All Categories</h2>
-
-        <ul>
-          {categories.map((category, i) => (
-            <li key={i}>
-              <Link to={`/category/${category.fieldValue}`}>{category.fieldValue}</Link>
-            </li>
-          ))}
-        </ul>
-
       </section>
     </Layout>
   )
 }
 
-export const PostBySlug = graphql`
+export const PostSlug = graphql`
   query ($postsLimit: Int!) {
     allMdx(
       limit: $postsLimit
@@ -67,10 +55,9 @@ export const PostBySlug = graphql`
             tagSlugs
           }
           frontmatter {
-            template
             title
-            slug
             date(formatString: "MMM D YYYY")
+            lastmod(formatString: "X")
             description
             category
             tags
@@ -81,4 +68,4 @@ export const PostBySlug = graphql`
   }
 `
 
-export default PostTemplate
+export default ViewPostsTemplate

@@ -2,12 +2,12 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { css } from 'twin.macro'
 import { Layout, Seo } from '../components'
+import tw from 'twin.macro'
 
 // site.com/jobs/<job>
 
-const JobsTemplate = ({ data, location }) => {
+const ViewJobTemplate = ({ data, location }) => {
   const { body, frontmatter } = data.mdx
   const { title, company, description, cover, range, url } = frontmatter
 
@@ -22,62 +22,49 @@ const JobsTemplate = ({ data, location }) => {
 
       <section>
         <article>
-
           <h2>{title}</h2>
-          <br />
 
           <GatsbyImage
+            css={[tw`border-4 border-black border-dashed`]}
             image={image}
             alt={company}
-            css={css`
-              border: 4px black dashed;
-            `}
           />
 
-          <br />
           <h2>{company}</h2>
-          <br />
           <h2>{description}</h2>
-          <br />
-          {/* <GatsbyImage image={image} alt={category} /> */}
-          <br />
           <p>{range}</p>
-          <br />
           <p>{url}</p>
-          <br />
 
           <MDXRenderer>{body}</MDXRenderer>
 
         </article>
       </section>
+
     </Layout>
   )
 }
 
-export const JobBySlugQuery = graphql`
+export const JobQuery = graphql`
   query ($slug: String!) {
-    mdx(
-      fields: { slug: { eq: $slug } }
-    ) {
+    mdx(fields: { slug: { eq: $slug } }) {
       body
       fields {
         slug
       }
       frontmatter {
         title
-        company
         description
+        company
+        range
+        url
         cover {
           childImageSharp {
             gatsbyImageData
           }
         }
-        range
-        url
       }
     }
   }
 `
 
-export default JobsTemplate
-
+export default ViewJobTemplate

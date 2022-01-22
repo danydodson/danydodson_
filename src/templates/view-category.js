@@ -2,10 +2,10 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { Layout, Seo } from '../components'
 
-// site.com/category/<category>
+// site.com/category/<category>/page/<page#>
 
 const CategoryTemplate = ({ data, pageContext, location }) => {
-  const { categories, category, currentPage } = pageContext
+  const { category, currentPage } = pageContext
   const { edges } = data.allMdx
 
   const { pathname } = location
@@ -18,33 +18,19 @@ const CategoryTemplate = ({ data, pageContext, location }) => {
 
       <section>
 
-        <h2>
-          Category Page: ({category})
-        </h2>
+        <h2>Category Page: ({category})</h2>
 
-        <h2>
-          page title:{pageTitle}
-        </h2>
+        <h2>page title:{pageTitle}</h2>
 
         <ul>
           {edges.map((edge, i) => (
+
             <li key={i}>
-              <Link to={`${edge.node.fields.slug}`}>{edge.node.frontmatter.title}</Link>
-            </li>
-          ))}
-        </ul>
 
-        <br />
-
-        <h2>all categories:</h2>
-
-        <ul>
-          {categories.map((category, i) => (
-            <li key={i}>
-              <span>title: </span>
-              <Link to={`/category/${category.fieldValue}`}>
-                <span>{category.fieldValue}</span>
+              <Link to={`${edge.node.fields.slug}`}>
+                {edge.node.frontmatter.title}
               </Link>
+
             </li>
           ))}
         </ul>
@@ -71,16 +57,15 @@ export const CategoryQuery = graphql`
           }
           frontmatter {
             title
-            slug
             date(formatString: "MMM D YYYY")
             description
             category
             tags
-            # cover {
-            #   childImageSharp {
-            #     gatsbyImageData(width: 700)
-            #   }
-            # }
+            cover {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
           }
         }
       }

@@ -1,15 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { css } from 'twin.macro'
 import { Layout, Seo } from '../components'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+import tw from 'twin.macro'
 
 // site.com/projects/<project>
 
-const ProjectsTemplate = ({ data, location }) => {
+const ViewProjectTemplate = ({ data, location }) => {
   const { body, frontmatter } = data.mdx
-  const { title, date, description, cover, github, external, tech } = frontmatter
+  const { title, date, description, cover, github, external, tags } = frontmatter
 
   const { pathname } = location
 
@@ -24,33 +24,25 @@ const ProjectsTemplate = ({ data, location }) => {
         <article>
 
           <h2>{title}</h2>
-          <br />
-          {/* <GatsbyImage image={image} alt={category} /> */}
+
           <h2>{date}</h2>
-          <br />
+
           <GatsbyImage
             image={image}
             alt={title}
-            css={css`
-              border: 4px black dashed;
-            `}
+            css={[tw`border-4 border-black border-dashed`]}
           />
-          <br />
-          <h2>{description}</h2>
-          <br />
-          <h2>{github}</h2>
-          <br />
-          <h2>{external}</h2>
-          <br />
-          <h2>{title}</h2>
-          <br />
 
-          {tech && tech.map((tag, i) => (
+          <h2>{description}</h2>
+          <h2>{github}</h2>
+          <h2>{external}</h2>
+          <h2>{title}</h2>
+
+          {tags && tags.map((tag, i) => (
             <h6 key={i}>
               {tag}
             </h6>
           ))}
-          <br />
 
           <MDXRenderer>{body}</MDXRenderer>
 
@@ -60,7 +52,7 @@ const ProjectsTemplate = ({ data, location }) => {
   )
 }
 
-export const ProjectBySlugQuery = graphql`
+export const ProjectQuery = graphql`
   query ($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       body
@@ -69,20 +61,21 @@ export const ProjectBySlugQuery = graphql`
       }
       frontmatter {
         title
-        date
+        date(formatString: "MMM D YYYY")
+        lastmod(formatString: "X")
         description
+        github
+        external
+        tags
         cover {
           childImageSharp {
             gatsbyImageData
           }
         }
-        github
-        external
-        tech
       }
     }
   }
 `
 
-export default ProjectsTemplate
+export default ViewProjectTemplate
 

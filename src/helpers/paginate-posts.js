@@ -1,14 +1,12 @@
 const path = require('path')
 const siteConfig = require('../config')
 
-const { getCategories } = require('./get-categories')
-
-module.exports = async (graphql, actions) => {
+const paginatePosts = async (graphql, actions) => {
   const { createPage } = actions
+  const { postsPerPage } = siteConfig
 
-  const categories = await getCategories(graphql)
 
-  const result = await graphql(`
+  const result = await graphql(`#graphql
     {
       allMdx(
         filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
@@ -18,15 +16,13 @@ module.exports = async (graphql, actions) => {
     }
   `)
 
-  const { postsPerPage } = siteConfig
   const numPages = Math.ceil(result.data.allMdx.totalCount / postsPerPage)
 
   for (let i = 0; i < numPages; i += 1) {
     createPage({
       path: i === 0 ? '/posts' : `/posts/page/${i}`,
-      component: path.resolve('./src/templates/posts-page.js'),
+      component: path.resolve('./src/templates/view-posts.js'),
       context: {
-        categories,
         currentPage: i,
         postsLimit: postsPerPage,
         postsOffset: i * postsPerPage,
@@ -38,3 +34,5 @@ module.exports = async (graphql, actions) => {
     })
   }
 }
+
+module.exports = paginatePosts
