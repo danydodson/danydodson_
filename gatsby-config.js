@@ -90,11 +90,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        id: `/`,
         start_url: `/`,
-        name: config.author.name,
-        short_name: config.author.username,
-        description: config.title,
+        short_name: `@danydodson`,
+        name: `🖐 | Dany Dodson | ☕Developer - 🎨Artist - 💜Creator.`,
+        description: `💻Full-stack web developer, JavaScript enthusiast, and creator of 📦 things.`,
         orientation: `portrait-primary`,
         display: `minimal-ui`,
         theme_color: `#0f172a`,
@@ -193,15 +192,15 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: 'Dany Dodson\'s Feed',
+            title: '☕ Dany Dodson\'s idée fixes',
             match: "^/post/"
           }
         ]
       }
     },
+    `gatsby-plugin-robots-txt`,
     `gatsby-plugin-graphql-config`,
     `gatsby-plugin-gatsby-cloud`,
-    `gatsby-plugin-robots-txt`,
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-google-analytics`,
