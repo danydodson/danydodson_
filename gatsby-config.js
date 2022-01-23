@@ -86,21 +86,6 @@ module.exports = {
         ]
       }
     },
-
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        start_url: `/`,
-        short_name: `@danydodson`,
-        name: `🖐 | Dany Dodson | ☕Developer - 🎨Artist - 💜Creator.`,
-        description: `💻Full-stack web developer, JavaScript enthusiast, and creator of 📦 things.`,
-        orientation: `portrait-primary`,
-        display: `minimal-ui`,
-        theme_color: `#0f172a`,
-        background_color: `#0f172a`,
-        icon: `src/assets/icons/icon-x512.png`
-      }
-    },
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
@@ -201,6 +186,20 @@ module.exports = {
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-graphql-config`,
     `gatsby-plugin-gatsby-cloud`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        start_url: `/`,
+        short_name: `@danydodson`,
+        name: `🖐 | Dany Dodson | ☕Developer - 🎨Artist - 💜Creator.`,
+        description: `💻Full-stack web developer, JavaScript enthusiast, and creator of 📦 things.`,
+        orientation: `portrait-primary`,
+        display: `minimal-ui`,
+        theme_color: `#0f172a`,
+        background_color: `#0f172a`,
+        icon: `src/assets/icons/icon-x512.png`
+      }
+    },
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-google-analytics`,
