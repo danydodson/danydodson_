@@ -66,11 +66,11 @@ const createPages = async ({ graphql, actions, reporter }) => {
   // reporter.success(JSON.stringify(result, null, 2))
 
   const { edges } = result.data.pages
-  const { group } = result.data.categories
+  // const { group } = result.data.categories
 
-  const categories = group.map(category => ({
-    ...category,
-  }))
+  // const categories = group.map(category => ({
+  //   ...category,
+  // }))
 
   edges.map(edge => {
 
@@ -84,7 +84,7 @@ const createPages = async ({ graphql, actions, reporter }) => {
       createPage({
         path: edge.node.fields.slug,
         component: path.resolve('./src/templates/view-post.js'),
-        context: { slug: `${edge.node.fields.slug}`, categories }
+        context: { slug: `${edge.node.fields.slug}` }
       })
     } else if (edge
       && edge.node
@@ -96,7 +96,7 @@ const createPages = async ({ graphql, actions, reporter }) => {
       createPage({
         path: edge.node.fields.slug,
         component: path.resolve('./src/templates/view-project.js'),
-        context: { slug: `${edge.node.fields.slug}`, categories }
+        context: { slug: `${edge.node.fields.slug}` }
       })
     } else if (edge
       && edge.node
@@ -108,7 +108,7 @@ const createPages = async ({ graphql, actions, reporter }) => {
       createPage({
         path: edge.node.fields.slug,
         component: path.resolve('./src/templates/view-job.js'),
-        context: { slug: `${edge.node.fields.slug}`, categories }
+        context: { slug: `${edge.node.fields.slug}` }
       })
     }
 

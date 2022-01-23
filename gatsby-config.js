@@ -2,13 +2,14 @@ require('dotenv').config({ path: `.env` })
 
 const config = require('./src/config')
 
-const siteUrl = process.env.URL || config.siteUrl
-
 module.exports = {
   siteMetadata: config,
   plugins: [
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-robots-txt`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-graphql-config`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -56,16 +57,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-cloudinary`,
-      options: {
-        apiKey: process.env.CLOUDINARY_API_KEY,
-        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
-        apiSecret: process.env.CLOUDINARY_API_SECRET,
-        resourceType: `image`,
-        prefix: `assets/`
-      }
-    },
-    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.md`, `.mdx`],
@@ -90,31 +81,48 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         query: `#graphql
-        {
-          allSitePage {
-            nodes {
-              path
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
             }
-          },
-          allMdx {
-            nodes {
-              frontmatter {
-                lastmod
+            allSitePage {
+              nodes {
+                path
+              }
+            },
+            allMdx(
+              filter: {frontmatter: {template: {in: [ "post", "project", "job"]}}}
+            ) {
+              nodes {
+                frontmatter {
+                  slug
+                  date
+                }
               }
             }
           }
-        }
-      `,
-        resolveSiteUrl: () => siteUrl,
-        resolvePages: ({ allSitePage: { nodes: allPages } }) => {
+        `,
+        resolvePages: ({
+          allSitePage: { nodes: allPages },
+          allMdx: { nodes: allMdxNodes }
+        }) => {
+          const allMdxNodesMap = allMdxNodes.map(node => {
+            return { date: node.frontmatter.date }
+          })
           return allPages.map(page => {
-            return { ...page }
+            return {
+              ...page,
+              ...allMdxNodesMap[0]
+            }
           })
         },
-        serialize: ({ path, modifiedGmt }) => {
+        serialize: ({ path, date }) => {
+          console.log({ path: path, lastmod: date })
           return {
             url: path,
-            lastmod: modifiedGmt
+            lastmod: date
           }
         }
       }
@@ -183,9 +191,6 @@ module.exports = {
         ]
       }
     },
-    `gatsby-plugin-robots-txt`,
-    `gatsby-plugin-graphql-config`,
-    `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
