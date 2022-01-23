@@ -191,8 +191,8 @@ module.exports = {
       options: {
         start_url: `/`,
         short_name: `@danydodson`,
-        name: `🖐 | Dany Dodson | ☕Developer - 🎨Artist - 💜Creator.`,
-        description: `💻Full-stack web developer, JavaScript enthusiast, and creator of 📦 things.`,
+        name: config.title,
+        description: config.about,
         orientation: `portrait-primary`,
         display: `minimal-ui`,
         theme_color: `#0f172a`,
