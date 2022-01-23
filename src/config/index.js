@@ -3,7 +3,7 @@ const config = {
   cover: `/cards/og@2x.png`,
   siteUrl: `https://danydodson.dev`,
   title: `🖐 Dany Dodson | ☕Web Developer | 🎨Artist | 💜Creator`,
-  about: `💻 Full-Stack web developer, javascript enthusiast, creator of 📦 things.`,
+  about: `💻 Full-stack web developer, javascript enthusiast, creator of 📦 things.`,
   username: `danydodson`,
   image: `/cards/og@1x.png`,
   email: `dany@danydodson.dev`,
