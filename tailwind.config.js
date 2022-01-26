@@ -1,7 +1,7 @@
 module.exports = {
+  content: ['./src/**/*.{js,jsx}'],
   theme: {
     extend: {
-
       backgroundColor: {
         primary: 'var(--bg-primary)',
         secondary: 'var(--bg-secondary)',
@@ -20,10 +20,8 @@ module.exports = {
 
       padding: {
         md: '-1.25rem'
-      },
+      }
     }
   },
-  plugins: [
-    require('@tailwindcss/typography')
-  ]
+  plugins: [require('@tailwindcss/typography')]
 }

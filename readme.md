@@ -5,7 +5,23 @@
 </div>
 
 <h1 align="center">danydodson.github.io</h1>
-
+<!-- "graphql": {
+    "schema": [
+      "./cache/schema.graphql",
+      ".cache/schema.gql"
+    ],
+    "documents": [
+      "**/**/*.{graphql,js,jsx}",
+      ".cache/fragments.graphql"
+    ],
+    "extensions": {
+      "endpoints": {
+        "default": {
+          "url": "http://localhost:8000/___graphql"
+        }
+      }
+    }
+  } -->
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/danydodson/danydodson.github.io?color=56BEB8">
   <img alt="Github language count" src="https://img.shields.io/github/languages/count/danydodson/danydodson.github.io?color=56BEB8">

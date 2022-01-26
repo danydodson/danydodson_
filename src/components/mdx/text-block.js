@@ -1,6 +1,6 @@
 import React from 'react'
 import tw, { styled } from 'twin.macro'
-import { Icon } from './icons'
+import { Icon } from '../icons'
 
 const TextBlock = ({ theme, children }) => {
   let icon

@@ -8,8 +8,6 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-gatsby-cloud`,
-    `gatsby-plugin-graphql-config`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -119,7 +117,6 @@ module.exports = {
           })
         },
         serialize: ({ path, date }) => {
-          console.log({ path: path, lastmod: date })
           return {
             url: path,
             lastmod: date
@@ -205,6 +202,8 @@ module.exports = {
         icon: `src/assets/icons/icon-x512.png`
       }
     },
+    `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-graphql-config`,
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-google-analytics`,

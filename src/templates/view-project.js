@@ -18,40 +18,24 @@ const ViewProjectTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <Seo
-        path={pathname}
-        title={`💻 Project: ${title} `}
-        description={description}
-        image={seoImage}
-        date={date}
-      />
+      <Seo path={pathname} title={`💻 Project: ${title} `} description={description} image={seoImage} date={date} />
 
       <section>
         <article>
-
           <h2>{title}</h2>
 
           <h2>{date}</h2>
 
-          <GatsbyImage
-            image={image}
-            alt={title}
-            css={[tw`border-4 border-black border-dashed`]}
-          />
+          <GatsbyImage image={image} alt={title} css={[tw`border-4 border-black border-dashed`]} />
 
           <h2>{description}</h2>
           <h2>{github}</h2>
           <h2>{external}</h2>
           <h2>{title}</h2>
 
-          {tags && tags.map((tag, i) => (
-            <h6 key={i}>
-              {tag}
-            </h6>
-          ))}
+          {tags && tags.map((tag, i) => <h6 key={i}>{tag}</h6>)}
 
           <MDXRenderer>{body}</MDXRenderer>
-
         </article>
       </section>
     </Layout>
@@ -83,4 +67,3 @@ export const ProjectQuery = graphql`
 `
 
 export default ViewProjectTemplate
-

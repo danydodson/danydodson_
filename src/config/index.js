@@ -7,7 +7,7 @@ const config = {
   username: `danydodson`,
   image: `/cards/og@1x.png`,
   email: `dany@danydodson.dev`,
-  copyright: `© 2021 | Dany Dodson ♡`,
+  copyright: `© 2021 | Dany Dodson ♡`, 
   postsPerPage: 10,
 }
 

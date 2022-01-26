@@ -17,6 +17,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
+    "bufferutil": "^4.0.6",
     "components": "link:./src/components",
     "config": "link:./src/config",
     "dotenv": "^14.2.0",
@@ -45,7 +46,8 @@
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-share": "^4.4.0",
-    "styles": "link:./src/styles"
+    "styles": "link:./src/styles",
+    "utf-8-validate": "^5.0.8"
   },
   "devDependencies": {
     "@babel/core": "^7.16.5",
@@ -69,20 +71,6 @@
       "preset": "emotion"
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/danydodson/danydodson.github.io"
-  },
-  "license": "MIT",
-  "keywords": [
-    "gatsby",
-    "tailwind",
-    "twin",
-    "mdx",
-    "react",
-    "portfolio",
-    "blog"
-  ],
   "graphql": {
     "schema": [
       "./cache/schema.graphql",
@@ -99,5 +87,19 @@
         }
       }
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danydodson/danydodson.github.io"
+  },
+  "license": "MIT",
+  "keywords": [
+    "gatsby",
+    "tailwind",
+    "twin",
+    "mdx",
+    "react",
+    "portfolio",
+    "blog"
+  ]
 }
