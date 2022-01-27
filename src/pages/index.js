@@ -1,13 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import tw from 'twin.macro'
 
-import {
-  Layout,
-  Seo,
-  Toggle,
-  Hero
-} from './../components'
+import { Layout, Seo, Posts } from '../components'
 
 const IndexPage = ({ location }) => {
   const { pathname } = location
@@ -16,22 +10,18 @@ const IndexPage = ({ location }) => {
     <Layout location={location}>
       <Seo path={pathname} />
 
-      <main css={styles.container({ hasBackground: false })}>
-        <Toggle />
-        <Hero />
-
-        <Link to='posts'>Go to Posts</Link>
-        
+      <main css={styles.container()}>
+        <Posts />
       </main>
+
     </Layout>
   )
 }
 
-export default IndexPage
-
 const styles = {
-  container: ({ hasBackground }) => [
+  container: () => [
     tw`flex flex-col items-center justify-center h-screen`,
-    hasBackground && tw`bg-gradient-to-b`
   ]
 }
+
+export default IndexPage

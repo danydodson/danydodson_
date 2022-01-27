@@ -1,5 +1,5 @@
 import React from 'react'
-import TextBlock from './text-block'
+import { TextBlock } from '.'
 
 const Danger = ({ children, padding }) => (
   <TextBlock theme='danger' children={children} padding={padding} />

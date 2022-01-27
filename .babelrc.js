@@ -1,7 +1,8 @@
 module.exports = {
   plugins: [
     'babel-plugin-twin',
-    'babel-plugin-macros'
+    'babel-plugin-macros',
+    '@emotion/babel-plugin'
   ],
   presets: [
     [
@@ -11,8 +12,7 @@ module.exports = {
           runtime: 'automatic',
           importSource: '@emotion/react'
         }
-      },
-      '@emotion/babel-preset-css-prop',
+      }
     ]
   ]
 }

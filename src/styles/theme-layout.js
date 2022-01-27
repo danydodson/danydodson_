@@ -5,9 +5,9 @@ import { MDXProvider } from '@mdx-js/react'
 
 import { ThemeProvider, themeBase } from '../styles'
 
-import { Embed, Collapsable, Danger } from '../components'
+import { Collapsable, Danger } from '../components'
 
-const components = { Embed, Collapsable, Danger }
+const components = { Collapsable, Danger }
 
 const ThemeLayout = ({ element }) => (
   <ThemeProvider>

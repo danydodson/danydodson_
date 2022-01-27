@@ -39,8 +39,6 @@ const ViewPostTemplate = ({ data, location }) => {
           <time>{date}</time>
           <br />
 
-          {/* <ShareButtons url={config.siteUrl + pathname} title={title} quote={title} tags={tags} /> */}
-
           <GatsbyImage
             image={image}
             alt={category}

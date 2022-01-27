@@ -1,10 +1,6 @@
 import React from 'react'
 
-const IconSun = () => (
-  <a href='http://localhost:8000' target='_blank' rel='noopener noreferrer'>
-    <Sun />
-  </a>
-)
+const IconSun = () => <Sun />
 
 const Sun = (props) => (
   <svg viewBox='0 0 24 24' width='24' height='24' xmlns='http://www.w3.org/2000/svg' {...props}>

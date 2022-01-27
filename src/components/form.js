@@ -1,6 +1,6 @@
 import React from 'react'
 import tw from 'twin.macro'
-import { Button } from '../components'
+import { Button } from '.'
 import { useForm } from '../hooks'
 
 const Form = () => {

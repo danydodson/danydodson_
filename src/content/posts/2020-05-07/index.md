@@ -12,17 +12,11 @@ tags: [interview]
 featured: false
 ---
 
-import { Collapsable, Danger } from '../../../components'
+import { Collapsable } from '../../../components'
 
 # New One
 
 Contact hashtag click <a href='https://twitter.com/hashtag/danydodson?src=hashtag_click' rel='noopener noreferrer' target='_blank' role='link'>@danydodson</a>
-
-<Danger>
-
-Its dangerous !
-
-</Danger>
 
 <Collapsable type='' title='warning'>
 

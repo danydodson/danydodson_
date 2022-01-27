@@ -1,6 +1,21 @@
 import tw, { css, theme } from 'twin.macro'
 
 const themeBase = css`
+  :root {
+    --pill-100-bg: #fde876;
+    --pill-100-text: #735f00;
+    --pill-200-bg: #c0e6ff;
+    --pill-200-text: #325c80;
+    --pill-300-bg: #99ffa0;
+    --pill-300-text: #12702e;
+    --pill-400-bg: #ffd4a0;
+    --pill-400-text: #a53725;
+  
+    --nav-height: 90px;
+    --nav-height-scrolling: 60px;
+
+    --ease: cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
 
   .light {
     --bg-primary: #ffffff;
@@ -20,25 +35,12 @@ const themeBase = css`
     --text-primary: #cbd5e1;
     --text-secondary: #ffffff;
     --color-primary: #2563eb;
-    
     --text-box-success: #3f774b;
     --text-box-info: #2e5d64;
     --text-box-warning: #796733;
     --text-box-danger: #693434;
-
-    --pill-100-bg: #fde876;
-    --pill-100-text: #735f00;
-
-    --pill-200-bg: #c0e6ff;
-    --pill-200-text: #325c80;
-
-    --pill-300-bg: #99ffa0;
-    --pill-300-text: #12702e;
-
-    --pill-400-bg: #ffd4a0;
-    --pill-400-text: #a53725;
   }
-
+  
   body {
     ${tw`bg-primary text-primary antialiased`};  
     ${tw`transition-all duration-200`};

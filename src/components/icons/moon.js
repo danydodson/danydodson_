@@ -1,10 +1,6 @@
 import React from 'react'
 
-const IconMoon = () => (
-  <a href='http://localhost:8000' target='_blank' rel='noopener noreferrer'>
-    <Moon />
-  </a>
-)
+const IconMoon = () => <Moon />
 
 const Moon = (props) => (
   <svg viewBox='0 0 24 24' width='24' height='24' xmlns='http://www.w3.org/2000/svg' {...props}>
