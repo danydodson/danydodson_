@@ -43,7 +43,7 @@ const themeBase = css`
   
   body {
     ${tw`bg-primary text-primary antialiased`};  
-    ${tw`transition-all duration-200`};
+    /* ${tw`transition-all duration-200`}; */
 
     --webkit-tap-highlight-color: ${theme`colors.purple.500`};
   }

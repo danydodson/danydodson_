@@ -12,6 +12,10 @@ const IndexPage = ({ location }) => {
 
       <main css={styles.container()}>
         <Posts />
+        <Posts />
+        <Posts />
+        <Posts />
+        <Posts />
       </main>
 
     </Layout>
