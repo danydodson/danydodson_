@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import tw, { styled } from 'twin.macro'
+import tw from 'twin.macro'
 
 const observer = typeof window !== 'undefined'
   ? new window.IntersectionObserver(
@@ -34,8 +34,8 @@ const Section = ({ name, centered, fullPage, children, noFade }) => {
 
   return (
     <section
-      css={styles.section(centered, fullPage)}
       id={name}
+      css={styles.section(centered, fullPage)}
       ref={sectionRef}
     >
       {children}

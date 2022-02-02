@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { Pills } from '../components'
+import { Section } from '.'
+import { Pills } from '..'
 
 const Posts = () => {
 
@@ -44,13 +45,13 @@ const Posts = () => {
   }
 
   return (
-    <section>
+    <Section name='posts' centered fullPage>
       {posts && posts.map(({ node }, item) => (
         <article key={item}>
           {postInner(node)}
         </article>
       ))}
-    </section>
+    </Section>
   )
 }
 
