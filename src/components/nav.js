@@ -31,11 +31,13 @@ const Nav = ({ isHome }) => {
       scrollDirection={scrollDirection}
       scrolledToTop={scrolledToTop}
     >
+      <StyledNav>
 
-      {isMounted && (
-        <Toggle />
-      )}
-
+        {isMounted && (
+          <Toggle />
+        )}
+        <div>test</div>
+      </StyledNav>
     </Header>
   )
 }
@@ -49,6 +51,10 @@ const Header = styled.header(({ scrollDirection, scrolledToTop }) => [
   tw`ease-nav transition-all duration-500`,
   scrollDirection === 'down' && !scrolledToTop && tw`h-0.5`,
   scrollDirection === 'up' && !scrolledToTop && tw`h-nav-scrolling opacity-80`,
+])
+
+const StyledNav = styled.nav(() => [
+  tw`flex justify-between items-center h-16`,
 ])
 
 export default Nav

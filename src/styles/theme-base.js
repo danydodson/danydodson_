@@ -40,7 +40,30 @@ const themeBase = css`
     --text-box-warning: #796733;
     --text-box-danger: #693434;
   }
-  
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .fadeIn {
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+  }
+
+  .fadeInSlow {
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+  }
+
   body {
     ${tw`bg-primary text-primary antialiased`};  
     /* ${tw`transition-all duration-200`}; */

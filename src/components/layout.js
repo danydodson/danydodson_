@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Nav } from '.'
+// import { Nav } from '.'
 
 const Layout = ({ children, location, ...rest }) => {
   return (
     <div {...rest}>
-      <Nav />
+      {/* <Nav /> */}
       {children}
     </div>
   )
