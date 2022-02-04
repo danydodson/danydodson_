@@ -34,20 +34,22 @@ const Posts = () => {
 
   const postInner = (node) => {
     const { frontmatter } = node
-    const { title, tags } = frontmatter
+    const { title, tags, description } = frontmatter
 
     return (
       <>
-        <h3>{title}</h3>
+        <h3 tw='text-5xl'>{title}</h3>
         <Pills items={tags} />
+        <p tw='text-2xl'>{description}</p>
       </>
     )
   }
 
   return (
     <Section name='posts' centered fullPage>
+      <h1 tw='text-7xl'>Writings</h1>
       {posts && posts.map(({ node }, item) => (
-        <article key={item}>
+        <article tw='w-[700px] my-10' key={item}>
           {postInner(node)}
         </article>
       ))}

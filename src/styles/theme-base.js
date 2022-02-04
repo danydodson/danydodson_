@@ -17,6 +17,12 @@ const themeBase = css`
     --ease: cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 
+  body {
+    ${tw`bg-primary text-primary antialiased`};
+    ${tw`transition-all duration-200`};
+    --webkit-tap-highlight-color: ${theme`colors.purple.500`};
+  }
+
   .light {
     --bg-primary: #ffffff;
     --bg-secondary: #f1f5f9;
@@ -62,13 +68,6 @@ const themeBase = css`
     animation-timing-function: ease;
     animation-delay: 0.7s;
     animation-fill-mode: forwards;
-  }
-
-  body {
-    ${tw`bg-primary text-primary antialiased`};  
-    /* ${tw`transition-all duration-200`}; */
-
-    --webkit-tap-highlight-color: ${theme`colors.purple.500`};
   }
 
   #___gatsby,

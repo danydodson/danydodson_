@@ -45,7 +45,7 @@ const Section = ({ name, centered, fullPage, children, noFade }) => {
 
 const styles = {
   section: (centered, fullPage) => [
-    tw`max-w-4xl my-0 mx-auto`,
+    tw``,
     centered && tw`flex items-center justify-center flex-col`,
     fullPage && tw`min-h-screen`,
   ]
