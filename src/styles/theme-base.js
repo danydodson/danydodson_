@@ -28,6 +28,7 @@ const themeBase = css`
     --bg-secondary: #f1f5f9;
     --text-primary: #475569;
     --text-secondary: #1e293b;
+    --bg-navbar-primary: #475569;
     --color-primary: #e11d48;
     --text-box-success: #dcffe4;
     --text-box-info: #17a2b8;
@@ -40,6 +41,7 @@ const themeBase = css`
     --bg-secondary: #1e293b;
     --text-primary: #cbd5e1;
     --text-secondary: #ffffff;
+    --bg-navbar-primary: #0f172a;
     --color-primary: #2563eb;
     --text-box-success: #3f774b;
     --text-box-info: #2e5d64;

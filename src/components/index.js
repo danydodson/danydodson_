@@ -13,6 +13,6 @@ export { default as Form } from './shared/form'
 export { default as Pills } from './shared/pills'
 
 export { default as Layout } from './layout'
-export { default as Nav } from './nav'
+export { default as Navbar } from './navbar'
 export { default as Seo } from './seo'
 export { default as Toggle } from './toggle'

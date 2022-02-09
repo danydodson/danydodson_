@@ -4,9 +4,9 @@ import tw from 'twin.macro'
 import { Section } from '.'
 
 const Social = () => (
-  <Section name='social' centered>
-    <article css={styles.container()}>
-      <p tw='text-4xl'>
+  <Section name='social'>
+    <footer css={styles.container()}>
+      <p tw='text-[2rem]'>
         Find my writing on my <Link to='#blog'>Blog</Link>, my thoughts on{' '}
         <a href='https://twitter.com/danydodson/' target='_blank' rel='noopener noreferrer'>
           Twitter
@@ -17,20 +17,21 @@ const Social = () => (
         </a>
         .
       </p>
-      <p tw='text-4xl'>
+      <p tw='text-[2rem]'>
         Feel free to reach out by sending me an{' '}
         <a href='mailto:dany@danydodson.dev' rel='noopener noreferrer'>
           Email
         </a>
         .
       </p>
-    </article>
+    </footer>
   </Section>
 )
 
 const styles = {
   container: () => [
-    tw`w-[700px]`
+    tw``
   ],
 }
+
 export default Social

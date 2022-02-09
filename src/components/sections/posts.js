@@ -49,7 +49,7 @@ const Posts = () => {
     <Section name='posts' centered fullPage>
       <h1 tw='text-7xl'>Writings</h1>
       {posts && posts.map(({ node }, item) => (
-        <article tw='w-[700px] my-10' key={item}>
+        <article tw='my-10' key={item}>
           {postInner(node)}
         </article>
       ))}

@@ -21,7 +21,7 @@ const IndexPage = ({ location }) => {
 
 const styles = {
   container: () => [
-    tw``,
+    tw`flex flex-col justify-center mx-32`,
   ]
 }
 
