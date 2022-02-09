@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { ThemeContext } from '../styles'
 import { Button, Icon } from '.'
 
-
 const Toggle = () => {
   const { theme, setTheme } = useContext(ThemeContext)
 
