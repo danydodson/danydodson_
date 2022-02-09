@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import tw from 'twin.macro'
-import Button from '../shared/button'
+import Button from '../button'
 
 const Collapsable = ({ children, title, titleSize = '1.25rem', defaultShow = false }) => {
 
