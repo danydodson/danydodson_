@@ -23,6 +23,8 @@
     }
   } -->
 <p align="center">
+  <a href="https://wakatime.com/badge/github/danydodson/danydodson.github.io"><img src="https://wakatime.com/badge/github/danydodson/danydodson.github.io.svg" alt="wakatime"></a>
+  <a href="https://wakatime.com/badge/user/5f103765-30df-4813-b3e9-28120f0a5e6a/project/65c9f940-4604-4bed-8d1e-6e41c2de1eb1"><img src="https://wakatime.com/badge/user/5f103765-30df-4813-b3e9-28120f0a5e6a/project/65c9f940-4604-4bed-8d1e-6e41c2de1eb1.svg" alt="wakatime"></a>
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/danydodson/danydodson.github.io?color=56BEB8">
   <img alt="Github language count" src="https://img.shields.io/github/languages/count/danydodson/danydodson.github.io?color=56BEB8">
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/danydodson/danydodson.github.io?color=56BEB8">
