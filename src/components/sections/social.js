@@ -1,11 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import tw from 'twin.macro'
 import { Section } from '.'
 
 const Social = () => (
-  <Section name='social'>
-    <footer css={styles.container()}>
+  <Section name='social' centered >
+    <footer>
       <p tw='text-[2rem]'>
         Find my writing on my <Link to='#blog'>Blog</Link>, my thoughts on{' '}
         <a href='https://twitter.com/danydodson/' target='_blank' rel='noopener noreferrer'>
@@ -27,11 +26,5 @@ const Social = () => (
     </footer>
   </Section>
 )
-
-const styles = {
-  container: () => [
-    tw``
-  ],
-}
 
 export default Social

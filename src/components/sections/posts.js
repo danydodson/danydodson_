@@ -46,7 +46,7 @@ const Posts = () => {
   }
 
   return (
-    <Section name='posts' centered fullPage>
+    <Section name='posts' fullPage centered>
       <h1 tw='text-7xl'>Writings</h1>
       {posts && posts.map(({ node }, item) => (
         <article tw='my-10' key={item}>

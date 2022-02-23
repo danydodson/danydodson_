@@ -3,18 +3,13 @@ import tw from 'twin.macro'
 import { Section } from '.'
 
 const Hero = () => (
-  <Section name='hero'>
-    <header css={styles.container()}>
-      <h1 tw='text-[4.5rem] font-medium' className='fadeIn'>Dany Dodson</h1>
-      <h3 tw='text-[2.5rem] font-light mt-[45px]' className='fadeIn'>I build things.</h3>
-    </header>
+  <Section name='hero' fullPage centered>
+    <h1 css={[respH1]} className='fadeIn'>Dany Dodson</h1>
+    <h3 css={[respH2]} className='fadeIn'>I build things.</h3>
   </Section>
 )
 
-const styles = {
-  container: () => [
-    tw`flex flex-col justify-center min-h-screen`
-  ],
-}
+const respH1 = tw`text-[3.5rem] font-medium md:text-8xl lg:text-[10rem]`
+const respH2 = tw`text-[2.7rem] font-light mt-12 md:text-7xl lg:text-[7rem]`
 
 export default Hero

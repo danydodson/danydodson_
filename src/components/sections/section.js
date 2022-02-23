@@ -18,7 +18,7 @@ const observer = typeof window !== 'undefined'
     unobserve() { },
   }
 
-const Section = ({ name, centered, fullPage, children, noFade }) => {
+const Section = ({ name, fullPage, centered, children, noFade }) => {
   const sectionRef = useRef(null)
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const Section = ({ name, centered, fullPage, children, noFade }) => {
   return (
     <section
       id={name}
-      css={styles.section(centered, fullPage)}
+      css={styles.section(fullPage, centered)}
       ref={sectionRef}
     >
       {children}
@@ -44,10 +44,9 @@ const Section = ({ name, centered, fullPage, children, noFade }) => {
 }
 
 const styles = {
-  section: (centered, fullPage) => [
-    tw``,
-    // centered && tw`flex items-center justify-center flex-col`,
-    // fullPage && tw`min-h-screen`,
+  section: (fullPage, centered) => [
+    fullPage && tw`min-h-screen`,
+    centered && tw`flex justify-center flex-col`,
   ]
 }
 

@@ -4,15 +4,13 @@ module.exports = {
     extend: {
       backgroundColor: {
         primary: 'var(--bg-primary)',
-        navbar: 'var(--bg-navbar-primary)',
         secondary: 'var(--bg-secondary)',
-        tertiary: 'var(--color-primary)'
       },
       textColor: {
         primary: 'var(--text-primary)',
-        navbar: 'var(--bg-navbar-primary)',
         secondary: 'var(--text-secondary)',
-        tertiary: 'var(--color-primary)'
+        tertiary: 'var(--text-tertiary)',
+        quaternary: 'var(--text-quaternary)',
       },
       borderRadius: {
         md: '1.25rem'

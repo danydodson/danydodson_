@@ -2,19 +2,26 @@ import tw, { css, theme } from 'twin.macro'
 
 const themeBase = css`
   :root {
-    --pill-100-bg: #fde876;
-    --pill-100-text: #735f00;
-    --pill-200-bg: #c0e6ff;
-    --pill-200-text: #325c80;
-    --pill-300-bg: #99ffa0;
-    --pill-300-text: #12702e;
-    --pill-400-bg: #ffd4a0;
-    --pill-400-text: #a53725;
-  
     --nav-height: 90px;
     --nav-height-scrolling: 60px;
-
     --ease: cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  
+  .light {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f1f5f9;
+    --text-primary: #475569;
+    --text-secondary: #1e293b;
+    --text-tertiary: #8a1d1d;
+  }
+
+  .dark {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-primary: #cbd5e1;
+    --text-secondary: #ffffff;
+    --text-tertiary: #8a1d1d;
+    --text-quaternary: #4d4d4d;
   }
 
   body {
@@ -26,32 +33,6 @@ const themeBase = css`
   #___gatsby,
   #gatsby-focus-wrapper {
     ${tw`w-full h-full`}
-  }
-  
-  .light {
-    --bg-primary: #ffffff;
-    --bg-secondary: #f1f5f9;
-    --text-primary: #475569;
-    --text-secondary: #1e293b;
-    --bg-navbar-primary: #475569;
-    --color-primary: #e11d48;
-    --text-box-success: #dcffe4;
-    --text-box-info: #17a2b8;
-    --text-box-warning: #ffc107;
-    --text-box-danger: #ee5252;
-  }
-
-  .dark {
-    --bg-primary: #0f172a;
-    --bg-secondary: #1e293b;
-    --text-primary: #cbd5e1;
-    --text-secondary: #ffffff;
-    --bg-navbar-primary: #0f172a;
-    --color-primary: #2563eb;
-    --text-box-success: #3f774b;
-    --text-box-info: #2e5d64;
-    --text-box-warning: #796733;
-    --text-box-danger: #693434;
   }
 
   @keyframes fadeIn {

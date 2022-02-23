@@ -1,0 +1,72 @@
+:root {
+  --pill-1-bg: #fde876;
+  --pill-1-text: #735f00;
+  --pill-2-bg: #c0e6ff;
+  --pill-2-text: #325c80;
+  --pill-3-bg: #99ffa0;
+  --pill-3-text: #12702e;
+  --pill-4-bg: #ffd4a0;
+  --pill-4-text: #a53725;
+
+  --nav-height: 90px;
+  --nav-height-scrolling: 60px;
+
+  --ease: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f1f5f9;
+
+  --text-primary: #475569;
+  --text-secondary: #1e293b;
+  --text-tertiary: #8a1d1d;
+  
+  --text-box-success: #dcffe4;
+  --text-box-info: #17a2b8;
+  --text-box-warning: #ffc107;
+  --text-box-danger: #ee5252;
+}
+
+.dark {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+
+  --text-primary: #cbd5e1;
+  --text-secondary: #ffffff;
+  --text-tertiary: #8a1d1d;
+  --text-quaternary: #4d4d4d;
+
+  --text-box-success: #3f774b;
+  --text-box-info: #2e5d64;
+  --text-box-warning: #796733;
+  --text-box-danger: #693434;
+}
+
+#___gatsby,
+#gatsby-focus-wrapper {
+  ${tw`w-full h-full`}
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fadeIn {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+}
+
+.fadeInSlow {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+}

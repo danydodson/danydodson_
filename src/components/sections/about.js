@@ -1,29 +1,36 @@
 import React from 'react'
-import tw from 'twin.macro'
+import tw, { styled, css } from 'twin.macro'
 import { Section } from '.'
 
 const About = () => (
-  <Section name='about'>
-    <article css={styles.container()}>
-      <p tw='text-[2rem]'>
+  <Section name='about' fullPage centered>
+    <Article className='article'>
+      <p>
         I'm a <span className='keyword'>maker</span> &amp; digital{' '}
         <span className='keyword'>nomad</span>.
       </p>
-      <p tw='text-[2rem]'>
+      <p>
         I code in JavaScript for pretty much{' '}
         <span className='keyword'>everything</span> (React, Electron, NodeJS,
         etc.), Python for <span className='keyword'>AI</span>, and Swift/Java
         for <span className='keyword'>mobile apps.</span> I{' '}
         <span className='keyword'>design</span> in Sketch.
       </p>
-    </article>
+    </Article>
   </Section>
 )
 
-const styles = {
-  container: () => [
-    tw`flex flex-col justify-center`
-  ],
-}
+const responify = tw`text-3xl md:text-4xl lg:text-5xl`
+
+const Article = styled.article(() => [
+  responify,
+  css`
+    p {margin-top: 21px;}
+    & p {transition: color 0.5s ease;}
+    &:hover>p {color: var(--text-quaternary);}
+    &:hover>p>span.keyword {color: var(--text-secondary);}
+    & p>span.keyword {transition: color 0.5s ease;}
+  `,
+])
 
 export default About
