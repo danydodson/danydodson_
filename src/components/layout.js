@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Navbar } from '.'
+// import { Navbar } from '.'
 
 const Layout = ({ children, location, ...rest }) => {
   return (
     <div {...rest}>
-      <Navbar />
+      {/* <Navbar /> */}
       {children}
     </div>
   )

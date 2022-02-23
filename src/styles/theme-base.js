@@ -23,6 +23,11 @@ const themeBase = css`
     --webkit-tap-highlight-color: ${theme`colors.purple.500`};
   }
 
+  #___gatsby,
+  #gatsby-focus-wrapper {
+    ${tw`w-full h-full`}
+  }
+  
   .light {
     --bg-primary: #ffffff;
     --bg-secondary: #f1f5f9;
@@ -70,11 +75,6 @@ const themeBase = css`
     animation-timing-function: ease;
     animation-delay: 0.7s;
     animation-fill-mode: forwards;
-  }
-
-  #___gatsby,
-  #gatsby-focus-wrapper {
-    ${tw`w-full h-full`}
   }
 
 `
