@@ -32,9 +32,6 @@ const Navbar = ({ isHome }) => {
         {isMounted && (
           <Toggle />
         )}
-        <a className='resume-button' href='/resume.pdf' target='_blank' rel='noopener noreferrer'>
-          Resume
-        </a>
       </Nav>
     </Header>
   )
@@ -45,14 +42,14 @@ Navbar.propTypes = {
 }
 
 const Header = styled.header(({ scrollDirection, scrolledToTop }) => [
-  tw`top-0 fixed bg-indigo-300 w-full h-nav z-10`,
+  tw`top-0 fixed bg-secondary text-secondary w-full h-[40px] z-10`,
   tw`ease-nav transition-all duration-500`,
-  scrollDirection === 'down' && !scrolledToTop && tw`h-0.5 translate-y-[-90px]`,
-  scrollDirection === 'up' && !scrolledToTop && tw`h-nav-scrolling opacity-80`,
+  scrollDirection === 'down' && !scrolledToTop && tw`h-0.5 translate-y-[-40px]`,
+  scrollDirection === 'up' && !scrolledToTop && tw`h-[40px] opacity-90`,
 ])
 
 const Nav = styled.nav(() => [
-  tw`h-full mx-4 flex justify-between items-center`,
+  tw`h-full max-w-[80%] my-0 mx-auto flex justify-between items-center`,
 ])
 
 export default Navbar

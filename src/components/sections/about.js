@@ -27,7 +27,7 @@ const Article = styled.article(() => [
   css`
     p {margin-top: 21px;}
     & p {transition: color 0.5s ease;}
-    &:hover>p {color: var(--text-quaternary);}
+    &:hover>p {color: var(--text-tertiary);}
     &:hover>p>span.keyword {color: var(--text-secondary);}
     & p>span.keyword {transition: color 0.5s ease;}
   `,

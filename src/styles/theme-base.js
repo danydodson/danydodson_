@@ -2,31 +2,32 @@ import tw, { css, theme } from 'twin.macro'
 
 const themeBase = css`
   :root {
-    --nav-height: 90px;
-    --nav-height-scrolling: 60px;
     --ease: cubic-bezier(0.645, 0.045, 0.355, 1);
   }
   
   .light {
     --bg-primary: #ffffff;
-    --bg-secondary: #f1f5f9;
+    --bg-secondary: #475569;
+    --bg-tertiary: #f1f5f9;
+    
     --text-primary: #475569;
-    --text-secondary: #1e293b;
-    --text-tertiary: #8a1d1d;
+    --text-secondary: #cbd5e1;
+    --text-tertiary: #1e293b;
   }
 
   .dark {
     --bg-primary: #0f172a;
-    --bg-secondary: #1e293b;
+    --bg-secondary: #cbd5e1;
+    --bg-tertiary: #1e293b;
+
     --text-primary: #cbd5e1;
-    --text-secondary: #ffffff;
-    --text-tertiary: #8a1d1d;
-    --text-quaternary: #4d4d4d;
+    --text-secondary: #475569;
+    --text-tertiary: #1e293b;
   }
 
   body {
     ${tw`bg-primary text-primary antialiased`};
-    ${tw`transition-all duration-200`};
+    ${tw`transition-all duration-500`};
     --webkit-tap-highlight-color: ${theme`colors.purple.500`};
   }
 
