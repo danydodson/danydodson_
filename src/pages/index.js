@@ -19,6 +19,7 @@ const IndexPage = ({ location }) => {
   )
 }
 
+
 const styles = {
   container: () => [
     tw`flex flex-col`,
