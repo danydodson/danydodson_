@@ -1,6 +1,9 @@
 import tw, { css, theme } from 'twin.macro'
+import fonts from './fonts'
 
 const themeBase = css`
+  ${fonts}
+
   :root {
     --ease: cubic-bezier(0.645, 0.045, 0.355, 1);
   }
@@ -26,7 +29,7 @@ const themeBase = css`
   }
 
   body {
-    ${tw`bg-primary text-primary antialiased`};
+    ${tw`font-sans bg-primary text-primary antialiased`};
     ${tw`transition-all duration-500`};
     --webkit-tap-highlight-color: ${theme`colors.purple.500`};
   }

@@ -12,6 +12,9 @@ module.exports = {
         secondary: 'var(--text-secondary)',
         tertiary: 'var(--text-tertiary)',
       },
+      fontFamily: {
+        sans: ['RundDisplay'],
+      },
       borderRadius: {
         md: '1.25rem'
       },
