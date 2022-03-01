@@ -17,3 +17,5 @@ const Pill = styled.span(() => [
 ])
 
 export default Pills
+
+

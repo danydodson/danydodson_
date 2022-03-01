@@ -4,6 +4,7 @@ import tw, { styled } from 'twin.macro'
 import { useScrollDirection } from '../hooks'
 import { Toggle } from '.'
 
+
 const Navbar = ({ isHome }) => {
   const [isMounted, setIsMounted] = useState(!isHome)
   const scrollDirection = useScrollDirection('down')
