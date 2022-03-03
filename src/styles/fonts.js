@@ -4,6 +4,8 @@ import RundDisplayThinWoff from '../fonts/rund-display/rund-display-thin/RundDis
 import RundDisplayThinWoff2 from '../fonts/rund-display/rund-display-thin/RundDisplay-Thin.woff2'
 import RundDisplayRegularWoff from '../fonts/rund-display/rund-display/RundDisplay-Regular.woff'
 import RundDisplayRegularWoff2 from '../fonts/rund-display/rund-display/RundDisplay-Regular.woff2'
+import RundDisplayMediumWoff from '../fonts/rund-display/rund-display-medium/RundDisplay-Medium.woff2'
+import RundDisplayMediumWoff2 from '../fonts/rund-display/rund-display-medium/RundDisplay-Medium.woff2'
 import RundDisplaySemiBoldWoff from '../fonts/rund-display/rund-display-semibold/RundDisplay-SemiBold.woff'
 import RundDisplaySemiBoldWoff2 from '../fonts/rund-display/rund-display-semibold/RundDisplay-SemiBold.woff2'
 import RundDisplayBlackWoff from '../fonts/rund-display/rund-display-black/RundDisplay-Black.woff'
@@ -30,6 +32,7 @@ import RundTextBlackItalicWoff2 from '../fonts/rund-text/rund-text-black/RundTex
 const rundDisplayNormalWeights = {
   100: [RundDisplayThinWoff, RundDisplayThinWoff2],
   400: [RundDisplayRegularWoff, RundDisplayRegularWoff2],
+  500: [RundDisplayMediumWoff, RundDisplayMediumWoff2],
   600: [RundDisplaySemiBoldWoff, RundDisplaySemiBoldWoff2],
   900: [RundDisplayBlackWoff, RundDisplayBlackWoff2],
 }

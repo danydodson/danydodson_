@@ -9,7 +9,7 @@ const Hero = () => (
   </Section>
 )
 
-const respH1 = tw`text-[3.5rem] font-medium md:text-8xl lg:text-[10rem]`
-const respH2 = tw`text-[2.7rem] font-light mt-12 md:text-7xl lg:text-[7rem]`
+const respH1 = tw`text-[3.5rem] font-black md:text-8xl lg:text-[10rem]`
+const respH2 = tw`text-[2.7rem] font-normal mt-12 md:text-7xl lg:text-[7rem]`
 
 export default Hero
