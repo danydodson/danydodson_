@@ -1,9 +1,9 @@
-import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { Layout, Seo } from '../components/layout'
+import React from 'react'
 import { css } from 'twin.macro'
+import { Layout, Seo } from '../components/layout'
 
 // site.com/post/<post>
 

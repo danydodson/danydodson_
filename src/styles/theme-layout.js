@@ -1,13 +1,13 @@
-import React from 'react'
 import { Global } from '@emotion/react'
-import { GlobalStyles } from 'twin.macro'
 import { MDXProvider } from '@mdx-js/react'
+import React from 'react'
+import { GlobalStyles } from 'twin.macro'
+import { themeBase, ThemeProvider } from '../styles'
 
-import { ThemeProvider, themeBase } from '../styles'
+// import { Collapsable } from '../components/mdx'
+// const components = { Collapsable, TextBlock }
 
-import { Collapsable, Danger } from '../components/mdx'
-
-const components = { Collapsable, Danger }
+const components = {}
 
 const ThemeLayout = ({ element }) => (
   <ThemeProvider>

@@ -17,9 +17,9 @@ const Collapsable = ({ children, title, titleSize = '1.25rem', defaultShow = fal
           </Title>
           : (
             <Title titleSize={titleSize}>
-              <Button onClick={() => setShow(!show)}>
+              <button onClick={() => setShow(!show)}>
                 {title}
-              </Button>
+              </button>
             </Title>
           )
       }
@@ -35,6 +35,6 @@ const Collapsable = ({ children, title, titleSize = '1.25rem', defaultShow = fal
 
 }
 
-const Title = tw.div`flex items-center text-2xl my-4`
+const Title = tw.p`flex items-center text-2xl my-4`
 
 export default Collapsable

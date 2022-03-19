@@ -13,8 +13,7 @@ module.exports = {
         tertiary: 'var(--text-tertiary)',
       },
       fontFamily: {
-        sans: ['RundDisplay', 'sans-serif'],
-        serif: ['serif'],
+        sans: ['RundDisplay'],
       },
       borderRadius: {
         md: '1.25rem'

@@ -1,7 +1,7 @@
 import React from 'react'
 import tw from 'twin.macro'
 import { Layout, Seo } from '../components/layout'
-import { Hero, About, Social, Posts } from '../components/sections'
+import { Hero, About, Posts, Social } from '../components/sections'
 
 const IndexPage = ({ location }) => {
   const { pathname } = location

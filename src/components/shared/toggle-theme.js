@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import tw from 'twin.macro'
-import { ThemeContext } from '../../styles'
 import { Button } from '.'
+import { ThemeContext } from '../../styles'
 import { Icon } from '../icons'
 
 const ToggleTheme = () => {

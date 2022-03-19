@@ -1,5 +1,5 @@
+import { graphql, Link } from 'gatsby'
 import React from 'react'
-import { Link, graphql } from 'gatsby'
 import { Layout, Seo } from '../components/layout'
 
 // site.com/categories
