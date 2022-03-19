@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ToggleTheme, ScrollUp } from '.'
+import { ToggleTheme, ScrollUp } from '../shared'
 
 const Layout = ({ children, location, ...rest }) => {
   return (

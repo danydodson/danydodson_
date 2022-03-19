@@ -1,12 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import tw from 'twin.macro'
-import { ThemeContext } from '../../styles'
-import { Button } from '../shared'
+import { Button } from '.'
 import { Icon } from '../icons'
 
-const ToggleTheme = () => {
+const ScrollUp = () => {
   const [visible, setVisible] = useState(false)
-  const { theme, setTheme } = useContext(ThemeContext)
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -23,18 +21,18 @@ const ToggleTheme = () => {
     return () => window.removeEventListener('scroll', toggleVisibility)
   }, [visible])
 
-  function isDark() {
-    return theme === 'dark'
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
     visible && (
       <Button
         css={styles.button()}
-        onClick={() => setTheme(isDark() ? 'light' : 'dark')}
-        aria-label='Toggle Theme'
+        onClick={scrollToTop}
+        aria-label='Scroll to top of page'
       >
-        {isDark() ? <Icon name='Moon' /> : <Icon name='Sun' />}
+        <Icon name='Up' />
       </Button>
     )
   )
@@ -43,8 +41,8 @@ const ToggleTheme = () => {
 const styles = {
   button: () => [
     tw`bg-secondary text-secondary`,
-    tw`fixed opacity-50 bottom-4 left-4 h-6 w-6 z-10`,
+    tw`fixed opacity-50 bottom-8 right-2 h-7 w-7 z-10`,
   ]
 }
 
-export default ToggleTheme
+export default ScrollUp
