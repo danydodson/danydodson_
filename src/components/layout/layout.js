@@ -5,9 +5,9 @@ import { ToggleTheme, ScrollUp } from '../shared'
 const Layout = ({ children, location, ...rest }) => {
   return (
     <div {...rest}>
+      {children}
       <ToggleTheme />
       <ScrollUp />
-      {children}
     </div>
   )
 }
