@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Section } from '.'
+import { Section } from '../shared'
 
 const Social = () => (
   <Section name='social' centered >

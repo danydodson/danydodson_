@@ -28,6 +28,10 @@ const themeBase = css`
     --text-tertiary: #1e293b;
   }
 
+  html {
+    scroll-behavior: smooth;    
+  }
+
   body {
     ${tw`font-sans bg-primary text-primary antialiased`};
     ${tw`transition-all duration-500`};

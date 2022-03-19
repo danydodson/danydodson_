@@ -1,6 +1,5 @@
 import React from 'react'
 import tw from 'twin.macro'
-
 import { Layout, Seo, Hero, About, Social, Posts } from '../components'
 
 const IndexPage = ({ location }) => {
@@ -22,8 +21,7 @@ const IndexPage = ({ location }) => {
 
 const styles = {
   container: () => [
-    tw`flex flex-col`,
-    tw`max-w-[80%] my-0 mx-auto`,
+    tw`flex flex-col items-center mx-[10%]`,
   ]
 }
 
