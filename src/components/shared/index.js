@@ -1,3 +1,3 @@
-export { default as ScrollToTop } from './scroll-to-top'
-export { default as Section } from './section'
-export { default as ToggleTheme } from './toggle-theme'
+export { default as Button } from './button'
+export { default as Pills } from './pills'
+

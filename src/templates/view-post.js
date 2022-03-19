@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { Layout, Seo } from '../components'
+import { Layout, Seo } from '../components/layout'
 import { css } from 'twin.macro'
 
 // site.com/post/<post>

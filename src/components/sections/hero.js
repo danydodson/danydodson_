@@ -1,6 +1,6 @@
 import React from 'react'
 import tw from 'twin.macro'
-import { Section } from '../shared'
+import { Section } from '.'
 
 const Hero = () => (
   <Section name='hero' fullPage centered>

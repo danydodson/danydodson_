@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { Layout, Seo } from '../components'
+import { Layout, Seo } from '../components/layout'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import tw from 'twin.macro'
 

@@ -5,7 +5,7 @@ import { MDXProvider } from '@mdx-js/react'
 
 import { ThemeProvider, themeBase } from '../styles'
 
-import { Collapsable, Danger } from '../components'
+import { Collapsable, Danger } from '../components/mdx'
 
 const components = { Collapsable, Danger }
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import tw, { styled, css } from 'twin.macro'
-import { Section } from '../shared'
+import { Section } from '.'
 
 const About = () => (
   <Section name='about' fullPage centered>

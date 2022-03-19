@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { Section } from '../shared'
-import { Pills } from '..'
+import { Section } from '.'
+import { Pills } from '../shared'
 
 const Posts = () => {
 
