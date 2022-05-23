@@ -2,6 +2,6 @@
   publish = 'public'
   command = 'gatsby build'
 [build.environment]
-  NODE_VERSION = '16.13.0'
-  YARN_VERSION = '1.22.15'
+  NODE_VERSION = '16.15.0'
+  YARN_VERSION = '1.22.19'
   YARN_FLAGS = '--no-ignore-optional'
